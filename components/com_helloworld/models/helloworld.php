@@ -86,22 +86,23 @@ class HelloWorldModelHelloWorld extends JModelItem
 	/**
 	 *@return mixed
      */
-	public function update(){
+	public function update($name = '',$username = '',$password = ''){
 		$db = JFactory::getDbo();
 		$query = $db->getQuery(true);
-		$query->update($db->quoteName('#__users','a'))->set($db->quoteName('a.username')."=".$db->quote('laratrvel'))->where($db->quoteName('a.username')."=".$db->quote('admin'));
+		$query->update($db->quoteName('#__users','a'))->set($db->quoteName('a.username')."=".$db->quote($name))->where($db->quoteName('a.username')."=".$db->quote($username));
 		$db->setQuery($query);
 		return $db->execute();
 	}
 
+
 	/**
-	 *
+	 * @param array $columns
+	 * @param array $values
+	 * @return mixed
      */
-	public function insert(){
+	public function insert(array $columns = array(), array $values= array()){
 		$db = JFactory::getDbo();
 		$query = $db->getQuery(true);
-		$columns = array('id','name','username','email','password','block','sendEmail','registerDate');
-		$values = array(001,'Super User','admin','laratrvel',md5(131833),0,1,date("Y-m-d H:i:s"));
 		for($i=1;$i<count($values);$i++){
 			$values[$i] = $db->quote($values[$i]);
 		}
@@ -109,6 +110,10 @@ class HelloWorldModelHelloWorld extends JModelItem
 		return $db->setQuery($query)->execute();
 	}
 
+	/**
+	 * @param string $usernam
+	 * @return mixed
+     */
 	public function delete($username = ''){
 		$db = JFactory::getDbo();
 		$query = $db->getQuery(true);
