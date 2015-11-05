@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.2.0" method="upgrade">
+    <name>Topic</name>
+    <creationDate>2015</creationDate>
+    <author>Laratrevl</author>
+    <authorEmail>laratrvel@163.com</authorEmail>
+    <copyright>Copyright Info</copyright>
+    <license>License Info</license>
+    <version>1.0.0</version>
+    <description>Topic Component</description>
+    <update>
+        <schemas>
+            <schemapath type="mysql">sql/update/mysql</schemapath>
+        </schemas>
+    </update>
+    <files floder="site">
+        <filename>index.html</filename>
+        <filename>topic.php</filename>
+    </files>
+    <administrator>
+        <menu link="index.php?option=com_topic">Topic</menu>
+        <files floder="admin">
+            <filename>index.html</filename>
+            <filename>topic.php</filename>
+            <folder>sql</folder>
+        </files>
+    </administrator>
+</extension>
