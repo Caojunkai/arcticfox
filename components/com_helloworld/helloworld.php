@@ -12,7 +12,6 @@ defined('_JEXEC') or die("没有权限");
 
 // Get an instance of the controller prefixed by HelloWorld
 $controller = JControllerLegacy::getInstance('HelloWorld');
-
 // Perform the Request task
 $input = JFactory::getApplication()->input;
 $controller->execute($input->getCmd('task'));

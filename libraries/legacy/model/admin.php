@@ -919,7 +919,6 @@ abstract class JModelAdmin extends JModelForm
 			$registry->loadString($item->params);
 			$item->params = $registry->toArray();
 		}
-
 		return $item;
 	}
 

@@ -9,7 +9,6 @@
 
 // No direct access to this file
 defined('_JEXEC') or die;
-
 /**
  * HelloWorld Model
  *
@@ -76,8 +75,8 @@ class HelloWorldModelHelloWorld extends JModelAdmin
 		$data = JFactory::getApplication()->getUserState(
 			'com_helloworld.edit.helloworld.data',
 			array()
-		);
 
+	);
 		if (empty($data))
 		{
 			$data = $this->getItem();
@@ -85,4 +84,12 @@ class HelloWorldModelHelloWorld extends JModelAdmin
 
 		return $data;
 	}
+	public function getInfo($id = ''){
+		$db = JFactory::getDbo();
+		$query = $db->getQuery(true);
+		$query->select('*')->from($db->quoteName('#__helloworld','a'))->where($db->quoteName('id')."=".$db->quote($id));
+		$db->setQuery($query);
+		return $db->loadObjectList();
+	}
+
 }

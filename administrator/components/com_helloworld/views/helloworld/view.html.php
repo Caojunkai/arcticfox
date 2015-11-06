@@ -9,7 +9,6 @@
 
 // No direct access to this file
 defined('_JEXEC') or die;
-
 /**
  * HelloWorld View
  *
@@ -34,6 +33,7 @@ class HelloWorldViewHelloWorld extends JViewLegacy
 	public function display($tpl = null)
 	{
 		// Get the Data
+		$info = $this->get('Info');
 		$form = $this->get('Form');
 		$item = $this->get('Item');
 
@@ -48,7 +48,6 @@ class HelloWorldViewHelloWorld extends JViewLegacy
 		// Assign the Data
 		$this->form = $form;
 		$this->item = $item;
-
 		// Set the toolbar
 		$this->addToolBar();
 
@@ -80,7 +79,6 @@ class HelloWorldViewHelloWorld extends JViewLegacy
 		{
 			$title = JText::_('COM_HELLOWORLD_MANAGER_HELLOWORLD_EDIT');
 		}
-
 		JToolBarHelper::title($title, 'helloworld');
 		JToolBarHelper::save('helloworld.save');
 		JToolBarHelper::cancel(

@@ -8,7 +8,6 @@
  */
 // No direct access to this file
 defined('_JEXEC') or die;
-
 /**
  * HelloWorld Controller
  *
@@ -18,4 +17,5 @@ defined('_JEXEC') or die;
  */
 class HelloWorldControllerHelloWorld extends JControllerForm
 {
+
 }

@@ -6,6 +6,7 @@ $controller = JControllerLegacy::getInstance('Topic');
 
 $input = JFactory::getApplication()->input;
 // Perform the Request task
+
 $controller->execute($input->getCmd('task'));
 
 $controller->redirect();

@@ -9,7 +9,6 @@
 
 // No direct access
 defined('_JEXEC') or die;
-
 ?>
 <form action="<?php echo JRoute::_('index.php?option=com_helloworld&layout=edit&id=' . (int) $this->item->id); ?>"
     method="post" name="adminForm" id="adminForm">
