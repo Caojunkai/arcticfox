@@ -13,15 +13,16 @@ defined('_JEXEC') or die;
  *
  * @since  0.0.1
  */
-class HelloWorldTableHelloWorld extends JTable
-{
-	/**
-	 * Constructor
-	 *
-	 * @param   JDatabaseDriver  &$db  A database connector object
-	 */
-	function __construct(&$db)
-	{
-		parent::__construct('#__helloworld', 'id', $db);
-	}
-}
+//class HelloWorldTableHelloWorld extends JTable
+//{
+//
+//	/**
+//	 * Constructor
+//	 *
+//	 * @param   JDatabaseDriver  &$db  A database connector object
+//	 */
+//	function __construct(&$db)
+//	{
+//		parent::__construct('#__helloworld', 'id', $db);
+//	}
+//}

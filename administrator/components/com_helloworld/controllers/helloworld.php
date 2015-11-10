@@ -17,5 +17,27 @@ defined('_JEXEC') or die;
  */
 class HelloWorldControllerHelloWorld extends JControllerForm
 {
+    public function save($key = null, $urlVar = null){
+//        var_dump($this->input->post->get('jform', array(), 'array'));die;
+        $data = $this->input->post->get('jform',array(),'array');
+
+        $model = $this->getModel();
+        $result = $model->save($data['id'],$data['greeting']);
+        if($result){
+            $this->setRedirect(
+                JRoute::_('index.php?option=com_helloworld&view=helloworld&layout=edit&id=4'),false
+            );
+        }
+    }
+    public function edit($key = 'id', $urlVar = null)
+    {
+         parent::edit($key, $urlVar);
+    }
+
+
+    public function cancel($key = null)
+    {
+        parent::cancel();
+    }
 
 }

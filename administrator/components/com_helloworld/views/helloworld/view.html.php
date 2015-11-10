@@ -33,7 +33,6 @@ class HelloWorldViewHelloWorld extends JViewLegacy
 	public function display($tpl = null)
 	{
 		// Get the Data
-		$info = $this->get('Info');
 		$form = $this->get('Form');
 		$item = $this->get('Item');
 
@@ -78,6 +77,7 @@ class HelloWorldViewHelloWorld extends JViewLegacy
 		else
 		{
 			$title = JText::_('COM_HELLOWORLD_MANAGER_HELLOWORLD_EDIT');
+
 		}
 		JToolBarHelper::title($title, 'helloworld');
 		JToolBarHelper::save('helloworld.save');

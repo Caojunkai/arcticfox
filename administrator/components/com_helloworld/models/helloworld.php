@@ -73,23 +73,39 @@ class HelloWorldModelHelloWorld extends JModelAdmin
 	{
 		// Check the session for previously entered form data.
 		$data = JFactory::getApplication()->getUserState(
-			'com_helloworld.edit.helloworld.data',
-			array()
-
-	);
-		if (empty($data))
-		{
+				'com_helloworld.edit.helloworld.data', array());
+		if (empty($data)) {
 			$data = $this->getItem();
-		}
 
-		return $data;
+			return $data;
+		}
 	}
-	public function getInfo($id = ''){
+
+	public function getParameter(){
+		$jinput = JFactory::getApplication()->input;
+		$id = $jinput->get('id',null,'INT');
+		return $id;
+	}
+
+	public function getItem($id = null){
+		$id = (!empty($id)) ? $id : $this->getParameter();;
 		$db = JFactory::getDbo();
 		$query = $db->getQuery(true);
 		$query->select('*')->from($db->quoteName('#__helloworld','a'))->where($db->quoteName('id')."=".$db->quote($id));
 		$db->setQuery($query);
-		return $db->loadObjectList();
+		$item = $db->loadAssoc();
+		$item =  JArrayHelper::toObject($item, 'JObject');
+		return $item;
 	}
 
+	public function save($id= null,$greeting = null,$state = null){
+		$id = (!empty($id)) ? $id : $this->getParameter();
+		$db = JFactory::getDbo();
+		$query = $db->getQuery(true);
+		$query->update($db->quoteName('#__helloworld','a'))
+				->set($db->quoteName('a.greeting')."=".$db->quote($greeting))
+				->where($db->quoteName('a.id')."=".$db->quote($id));
+		$db->setQuery($query);
+		return $db->execute();
+	}
 }

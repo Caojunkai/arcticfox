@@ -616,6 +616,7 @@ class JControllerForm extends JControllerLegacy
 		$app   = JFactory::getApplication();
 		$lang  = JFactory::getLanguage();
 		$model = $this->getModel();
+
 		$table = $model->getTable();
 		$data  = $this->input->post->get('jform', array(), 'array');
 		$checkin = property_exists($table, 'checked_out');
