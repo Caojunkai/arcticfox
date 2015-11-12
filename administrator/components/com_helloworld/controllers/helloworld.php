@@ -17,27 +17,100 @@ defined('_JEXEC') or die;
  */
 class HelloWorldControllerHelloWorld extends JControllerForm
 {
+    /**
+     * @param null $key
+     * @param null $urlVar
+     * @return bool
+     * @throws Exception
+     */
     public function save($key = null, $urlVar = null){
-//        var_dump($this->input->post->get('jform', array(), 'array'));die;
-        $data = $this->input->post->get('jform',array(),'array');
-
+        $app   = JFactory::getApplication();
         $model = $this->getModel();
-        $result = $model->save($data['id'],$data['greeting']);
+        $id = $app->input->get('id',null,'INT');
+        $cid   = $this->input->post->get('cid', array(), 'array');
+        $context = "$this->option.edit.$this->context";
+        if (empty($key))
+        {
+            $key = $id;
+        }
+
+        if (empty($urlVar))
+        {
+            $urlVar = $key;
+        }
+        $recordId = (int) (count($cid) ? $cid[0] : $this->input->getInt($urlVar));
+        // Access check
+        if (!$this->allowEdit(array($key => $recordId), $key))
+        {
+            $this->setError(JText::_('JLIB_APPLICATION_ERROR_EDIT_NOT_PERMITTED'));
+            $this->setMessage($this->getError(), 'error');
+
+            $this->setRedirect(
+                JRoute::_(
+                    'index.php?option=' . $this->option . '&view=' . $this->view_list
+                    . $this->getRedirectToListAppend(), false
+                )
+            );
+
+            return false;
+        }
+        $data = $this->input->post->get('jform',array(),'array');
+//        if(!$data['greeting']){
+//            var_dump($data['greeting']);
+//        }   die;
+        if($id ){
+            $result = $model->save($data);
+        }else{
+            $result = $model->add($data);
+        }
         if($result){
             $this->setRedirect(
-                JRoute::_('index.php?option=com_helloworld&view=helloworld&layout=edit&id=4'),false
+                'index.php?option=' . $this->option . '&view=' . $this->view_list
+                . $this->getRedirectToListAppend(), false);
+        }else{
+            $this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_SAVE_FAILED', $model->getError()));
+            $this->setMessage($this->getError(), 'error');
+            $this->setRedirect(
+                JRoute::_(
+                    'index.php?option=' . $this->option . '&view=' . $this->view_item
+                    . $this->getRedirectToItemAppend($recordId, $urlVar), false
+                )
             );
+
+            return false;
         }
     }
-    public function edit($key = 'id', $urlVar = null)
+
+    /**
+     * @param null $key
+     * @param null $urlVar
+     */
+    public function edit($key = null, $urlVar = null)
     {
-         parent::edit($key, $urlVar);
+        $cid = $this->input->post->get('cid',array(),'array');
+        if(empty($key))
+            $key = 'id';
+        if(empty($urlVar))
+            $urlVar = $key;
+        $recordId = (int) (count($cid) ? $cid[0] : $this->input->getInt($urlVar));
+        $this->setRedirect(
+                JRoute::_('index.php?option='.$this->option.'&view='.$this->view_item.
+                    $this->getRedirectToItemAppend($recordId,$urlVar),false)
+            );
+//       parent::edit('id');
     }
 
 
+    /**
+     * @param null $key
+     */
     public function cancel($key = null)
     {
-        parent::cancel();
+        $this->setRedirect(
+            JRoute::_(
+                'index.php?option=' . $this->option . '&view=' . $this->view_list, false
+            )
+        );
     }
 
 }

@@ -6,7 +6,6 @@
  * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
-
 // No direct access to this file
 defined('_JEXEC') or die;
 /**
@@ -88,24 +87,74 @@ class HelloWorldModelHelloWorld extends JModelAdmin
 	}
 
 	public function getItem($id = null){
-		$id = (!empty($id)) ? $id : $this->getParameter();;
-		$db = JFactory::getDbo();
-		$query = $db->getQuery(true);
-		$query->select('*')->from($db->quoteName('#__helloworld','a'))->where($db->quoteName('id')."=".$db->quote($id));
-		$db->setQuery($query);
-		$item = $db->loadAssoc();
-		$item =  JArrayHelper::toObject($item, 'JObject');
-		return $item;
+		$id = $this->getParameter();
+		if($id){
+			$db = JFactory::getDbo();
+			$query = $db->getQuery(true);
+			$query->select('*')
+					->from($db->quoteName('#__helloworld','a'))
+					->where($db->quoteName('id')."=".$db->quote($id));
+			$db->setQuery($query);
+			$item = $db->loadAssoc();
+			if(!$item){
+				$item = array('id'=>'','greeting'=>'','published'=>'');
+			}
+			$item =  JArrayHelper::toObject($item, 'JObject');
+			return $item;
+		}else{
+			$item = array('id'=>'','greeting'=>'','published'=>'');
+			$item = JArrayHelper::toObject($item, 'JObject');
+			return $item;
+		}
+
 	}
 
-	public function save($id= null,$greeting = null,$state = null){
-		$id = (!empty($id)) ? $id : $this->getParameter();
+	public function save($data){
+		$id = $this->getParameter();
 		$db = JFactory::getDbo();
 		$query = $db->getQuery(true);
 		$query->update($db->quoteName('#__helloworld','a'))
-				->set($db->quoteName('a.greeting')."=".$db->quote($greeting))
+				->set($db->quoteName('a.greeting')."=".$db->quote($data['greeting']))
 				->where($db->quoteName('a.id')."=".$db->quote($id));
 		$db->setQuery($query);
 		return $db->execute();
 	}
+	public function add($data){
+		$db = JFactory::getDbo();
+		$query = $db->getQuery(true);
+		$columns = array('greeting','published');
+		$values = array($db->quote($data['greeting']),0);
+		$query->insert($db->quoteName('#__helloworld'))
+				->columns($db->quoteName($columns))
+			  	->values(implode(',',$values));
+		$db->setQuery($query);
+		return $db->execute();
+//		try{
+//			$result = $db->execute();
+//		}catch (ErrorException $e){
+//			$e->getMessage();
+//		}
+	}
+
+	public function delete(&$pks){
+		$db = JFactory::getDbo();
+		$query = $db->getQuery(true);
+		$conditions = $db->quoteName('id')." IN (".implode(',',$pks).")";
+		$query->delete($db->quoteName('#__helloworld'))
+				->where($conditions);
+		$db->setQuery($query);
+		return $db->execute();
+	}
+
+	public function publish(&$pks, $value = 1)
+	{
+		$db = JFactory::getDbo();
+		$query = $db->getQuery(true);
+		$query->update($db->quoteName('#__helloworld'))
+			->set($db->quoteName('published')."="."ABS({$db->quoteName('published')}-1)")
+			->where($db->quoteName('id')."=".$db->quote($pks[0]));
+		$db->setQuery($query);
+		return $db->execute();
+	}
+
 }

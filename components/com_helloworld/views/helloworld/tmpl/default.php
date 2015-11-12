@@ -14,6 +14,6 @@ defined('_JEXEC') or die;
 <!--    <iframe src="http://arcticfox.sinaapp.com/Admin/Login/index.html" scrolling="no" width="100%" height="700px"></iframe>-->
 <form action="">
     <label for="username">用户名</label><input id="username" type="text" placeholder=<?php echo $this->msg ?>>
-    <label for="password">密码</label><input id="password" type="text" placeholder="*********"><br />
+    <label for="password">密码</label><input id="password" type="password" placeholder="*********"><br />
     <button type="submit">登录</button>
 </form>

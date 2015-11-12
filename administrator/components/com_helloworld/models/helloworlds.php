@@ -43,7 +43,7 @@ class HelloWorldModelHelloWorlds extends JModelList
 	 *
 	 * @return      string  An SQL query
 	 */
-	protected function getListQuery()
+	public function getListQuery()
 	{
 		// Initialize variables.
 		$db    = JFactory::getDbo();
@@ -82,4 +82,5 @@ class HelloWorldModelHelloWorlds extends JModelList
 
 		return $query;
 	}
+
 }

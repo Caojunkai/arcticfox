@@ -145,7 +145,6 @@ class JControllerForm extends JControllerLegacy
 	{
 		$app = JFactory::getApplication();
 		$context = "$this->option.edit.$this->context";
-
 		// Access check.
 		if (!$this->allowAdd())
 		{
@@ -310,7 +309,6 @@ class JControllerForm extends JControllerLegacy
 		}
 
 		$recordId = $app->input->getInt($key);
-
 		// Attempt to check-in the current record.
 		if ($recordId)
 		{
@@ -382,7 +380,6 @@ class JControllerForm extends JControllerLegacy
 		// Get the previous record id (if any) and the current record id.
 		$recordId = (int) (count($cid) ? $cid[0] : $this->input->getInt($urlVar));
 		$checkin = property_exists($table, 'checked_out');
-
 		// Access check.
 		if (!$this->allowEdit(array($key => $recordId), $key))
 		{

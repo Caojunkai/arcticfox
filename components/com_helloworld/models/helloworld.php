@@ -59,14 +59,16 @@ class HelloWorldModelHelloWorld extends JModelItem
 			$id     = $jinput->get('id', 1, 'INT');
 
 			// Get a TableHelloWorld instance
-			$table = $this->getTable();
+//			$table = $this->getTable();
 
 			// Load the message
-			$table->load($id);
-
+//			$table->load($id);
+			$result = $this->select($id);
 			// Assign the message
-			$this->messages[$id] = $table->greeting;
+//			$this->messages[$id] = $table->greeting;
+			$this->messages[$id] = $result['greeting'];
 			$this->messages['contents'] = ".....................";
+			$this->messages['id'] = $id;
 		}
 		return $this->messages;
 
@@ -75,12 +77,14 @@ class HelloWorldModelHelloWorld extends JModelItem
 	/**
 	 * @return mixed
      */
-	public function select(){
+	public function select($id){
 		$db = JFactory::getDbo();
 		$query = $db->getQuery(true);
-		$query->select('COUNT(*) AS '.$db->quoteName('NUM'))->from($db->quoteName('#__users','a'))->where($db->quoteName('a.username')."=".$db->quote('admin'));
+		$query->select('*')
+				->from($db->quoteName('#__helloworld'))
+				->where($db->quoteName('id')."=".$db->quote($id));
 		$db->setQuery($query);
-		return $db->loadObjectList();
+		return $db->loadAssoc();
 	}
 
 	/**
