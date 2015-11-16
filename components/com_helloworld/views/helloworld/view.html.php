@@ -30,6 +30,7 @@ class HelloWorldViewHelloWorld extends JViewLegacy
 		$model = $this->getModel('HelloWorld');
 		// Assign data to the view
 		$messages = $model->getMsg();
+		$this->mmm = $model->all();
 		$id = $messages['id'];
 		$this->msg = $messages[$id];
 		$this->contents = $messages['contents'];

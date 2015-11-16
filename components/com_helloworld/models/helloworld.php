@@ -86,7 +86,15 @@ class HelloWorldModelHelloWorld extends JModelItem
 		$db->setQuery($query);
 		return $db->loadAssoc();
 	}
-
+	public function all(){
+		$db = JFactory::getDbo();
+		$query = $db->getQuery(true);
+		$query->select('*')
+			->from($db->quoteName('#__extensions'))
+			->innerJoin($db->quoteName('#__extensions_copy'));
+		$db->setQuery($query);
+		return $db->loadAssocList();
+	}
 	/**
 	 *@return mixed
      */

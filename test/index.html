@@ -1,0 +1,79 @@
+<html>
+<head>
+    <link href="http://www.imooc.com/data/jquery.autocomplete.css" rel="stylesheet"          type="text/css" />
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://www.imooc.com/data/jquery.autocomplete.js" type="text/javascript"></script>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        .main{
+            width: 640px;
+            margin: 200px auto;
+        }
+        input{
+            width: 540px;
+            height: 40px;
+            border: solid #9C9C9C 1px;
+        }
+        button{
+            width: 100px;
+            height: 40px;
+            margin-left: -9px;
+            border: none;
+            background: #3184FF;
+            cursor: pointer;
+        }
+        .inputBox{
+            margin-top: 20px;
+        }
+        .add{
+            width: 536px;
+            border: solid #CECECE 1px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+<div class="main">
+    <div class="inputBox">
+        <form action="">
+            <input type="text" id="kw" />
+            <button type="button" id="btn">Search</button>
+        </form>
+    </div>
+    <div class="add">
+        <!--<div class="grid grid-1"></div>-->
+        <!--<div class="grid grid-2"></div>-->
+        <!--<div class="grid grid-3"></div>-->
+        <!--<div class="grid grid-4"></div>-->
+        <!--<div class="grid grid-5"></div>-->
+        <!--<div class="grid grid-6"></div>-->
+        <!--<div class="grid grid-7"></div>-->
+        <!--<div class="grid grid-8"></div>-->
+        <!--<div class="grid grid-9"></div>-->
+        <!--<div class="grid grid-10"></div>-->
+    </div>
+</div>
+<p id="result"></p>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(document).keypress(function(event){
+            if(event.keyCode == 13){
+                $("btn").sub();
+            }
+        })
+        $("#kw").bind("focus",function(){
+            $.getJSON(
+                    "https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+$("#kw").val()+"&json=1&p=3&sid=1447_17758_17620_12896_17900_12824_17783_17927_17971_17000_17073_14967_11901&req=2&sc=eb&csor=0&cb=?",
+                    function(data){
+//                     $("#result").text(data.g[1].q);
+                       $(".add").show();
+                    })
+        })
+    });
+</script>
+</body>
+</html>
