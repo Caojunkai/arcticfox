@@ -70,7 +70,9 @@
                     "https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+$("#kw").val()+"&json=1&p=3&sid=1447_17758_17620_12896_17900_12824_17783_17927_17971_17000_17073_14967_11901&req=2&sc=eb&csor=0&cb=?",
                     function(data){
 //                     $("#result").text(data.g[1].q);
-                       $(".add").show();
+                       $(".add").show("normal",function(){
+                           $(".add").text(data.g[1].q);
+                       });
                     })
         })
     });
