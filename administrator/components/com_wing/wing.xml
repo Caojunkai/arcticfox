@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.2.0" method="upgrade">
+    <name>COM_WING</name>
+    <!-- The following elements are optional and free of formatting constraints -->
+    <creationDate>Nov 2014</creationDate>
+    <author>Laratrvel</author>
+    <authorEmail>laratrvel@163.com</authorEmail>
+    <authorUrl>http://www.example.org</authorUrl>
+    <copyright>Copyright Info</copyright>
+    <license>License Info</license>
+    <!--  The version string is recorded in the components table -->
+    <version>V0.0.2</version>
+    <!-- The description is optional and defaults to the name -->
+    <description>COM_WING_DESCRIPTION</description>
+
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+    <update> <!-- Runs on update; New in 2.5 -->
+        <schemas>
+            <schemapath type="mysql">sql/updates/mysql</schemapath>
+        </schemas>
+    </update>
+
+    <!-- Site Main File Copy Section -->
+    <!-- Note the folder attribute: This attribute describes the folder
+            to copy FROM in the package to install therefore files copied
+            in this section are copied from /site/ in the package -->
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>wing.php</filename>
+        <filename>controller.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <!--<floder>controllers</floder>-->
+    </files>
+
+    <!--<languages folder="site/language">-->
+        <!--<language tag="zh-CN">zh-CN/zh-CN.com_wing.ini</language>-->
+    <!--</languages>-->
+
+    <media destination="com_wing" folder="media">
+        <filename>index.html</filename>
+        <folder>images</folder>
+    </media>
+
+    <administration>
+        <!-- Administration Menu Section -->
+        <menu img="../media/com_wing/images/tux-16x16.png">COM_WING_MENU</menu>
+        <submenu>
+            <menu link="" view="" img="" alt="">COM_WING_SUBMENU_01</menu>
+            <menu link="" view="" img="" alt="">COM_WING_SUBMENU_02</menu>
+            <menu link="" view="" img="" alt="">COM_WING_SUBMENU_03</menu>
+            <menu link="" view="" img="" alt="">COM_WING_SUBMENU_04</menu>
+            <menu link="" view="" img="" alt="">COM_WING_SUBMENU_05</menu>
+            <menu link="" view="" img="" alt="">COM_WING_SUBMENU_06</menu>
+        </submenu>
+        <!-- Administration Main File Copy Section -->
+        <!-- Note the folder attribute: This attribute describes the folder
+                to copy FROM in the package to install therefore files copied
+                in this section are copied from /admin/ in the package -->
+        <files folder="admin">
+            <!-- Admin Main File Copy Section -->
+            <filename>index.html</filename>
+            <filename>wing.php</filename>
+            <filename>controller.php</filename>
+            <!-- SQL files section -->
+            <folder>sql</folder>
+            <!-- tables files section -->
+
+            <!--<folder>tables</folder>-->
+
+            <!-- models files section -->
+            <folder>models</folder>
+            <!-- views files section -->
+            <folder>views</folder>
+            <!-- controllers files section -->
+            <folder>controllers</folder>
+        </files>
+        <languages folder="admin/language">
+            <language tag="zh-CN">zh-CN/zh-CN.com_wing.ini</language>
+            <language tag="zh-CN">zh-CN/zh-CN.com_wing.sys.ini</language>
+        </languages>
+    </administration>
+
+</extension>

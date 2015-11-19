@@ -1,30 +1,43 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <title>Chunlv Engine</title>
     <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <style>
         *{
             margin: 0;
             padding:0;
+            font-family: Microsoft YaHei, Helvetica, Arial, sans-serif;
+        }
+        .header{
+            width: 640px;
+            height: 70px;
+            margin: 200px auto;
+            text-align: center;
+            line-height: 70px;
+            font-size: 30px;
         }
         .main{
-            width: 640px;
-            margin: 200px auto;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            width: 645px;
+            margin: -200px auto;
         }
         input{
-            width: 540px;
-            height: 40px;
+            width: 538px;
+            height: 38px;
             border: solid #9C9C9C 1px;
             font-size: 17px;
             float: left;
+            text-indent: 5px;
         }
         button{
-            width: 100px;
+            width: 105px;
             height: 40px;
             float: left;
             border: none;
             background: #3184FF;
             cursor: pointer;
+            font-size: 20px;
         }
         .inputBox{
             margin-top: 20px;
@@ -42,60 +55,89 @@
             padding: 5px;
             cursor: pointer;
         }
+        .add li:hover{
+            display: block;
+            background: #EDFAFA;
+            border-top: outset #ADADAD 1px;
+            border-bottom: outset #FFFFFF 1px;
+            border-radius: 10px;
+        }
     </style>
 </head>
 
 <body>
-<div class="header">
-
-</div>
-<div class="main">
-    <div class="inputBox">
-        <form action="">
-            <input type="text" id="kw" autocomplete="off"/>
-            <button type="button" id="btn">Search</button>
-        </form>
+<div class="wrapper">
+    <div class="header">
+        <p>Donkey Ass</p>
     </div>
-    <div class="add">
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
+    <div class="main">
+        <div class="inputBox">
+            <!--<form action="">-->
+            <input type="text" id="kw" autocomplete="off" placeholder="蠢驴FYSB"/>
+            <button type="button" id="btn">蠢驴</button>
+            <!--</form>-->
+        </div>
+        <div class="add">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
     </div>
 </div>
 <p id="result"></p>
 <script type="text/javascript">
     $(document).ready(function(){
-        $(document).keypress(function(event){
-            if(event.keyCode == 13){
-                $("btn").sub();
-            }
-        })
         $("#kw").bind("focus keyup ",function(){
             $.getJSON(
                     "https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+$("#kw").val()+"&json=1&p=3&sid=1447_17758_17620_12896_17900_12824_17783_17927_17971_17000_17073_14967_11901&req=2&sc=eb&csor=0&cb=?",
                     function(data){
-                        var data_g = data.g;
+                        var data_g = data["g"];
                         if(data_g != undefined){
                             $(".add").show(100,function(){
                                 $("li").each(function(index){
-                                    $(this).html(data.g[index].q);
+//                                    $(this).text(data.g[index].q);
+                                    $(this).text(data["g"][index]["q"]);
+//                                    $(this).data("data-key",data.g[index].q);
+                                    $(this).data("data-key",data["g"][index]["q"]);
                                 })
                             });
                         }
                         if($("#kw").val() == ""){
                             $(".add").hide(100);
                         }
-                    })
+                    });
+        });
+        //点击搜索
+        $("li").bind("click",function(){
+            var keyWords = $(this).data("data-key");
+            location.href = "https://www.baidu.com/s?wd="+keyWords;
         })
+        $("#btn").bind("click",function(){
+            var keyWords = $("#kw").val();
+            if(keyWords != undefined && keyWords != ""){
+                location.href = "https://www.baidu.com/s?wd="+keyWords;
+            }
+        });
+        $(document).keypress(function(event){
+            if(event.keyCode == 13){
+                var keyWords = $("#kw").val();
+                if(keyWords != undefined && keyWords != ""){
+                    location.href = "https://www.baidu.com/s?wd="+keyWords;
+//                    form.action = "https://www.baidu.com/s?wd="+keyWords;
+//                    $("btn").submit();
+                }
+            }
+        });
+
     });
 </script>
 </body>
