@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>MOD_LUNBO</name>
+    <author>Laratrvel</author>
+    <creationDate>2015-11-23</creationDate>
+    <version>V0.0.1</version>
+    <description>MOD_LUNBO_DESC</description>
+    <files>
+        <filename>mod_lunbo.xml</filename>
+        <filename module="mod_lunbo">mod_lunbo.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+        <folder>media</folder>
+        <folder>sql</folder>
+    </files>
+
+    <media destination="mod_lunbo" folder="media">
+        <filename>index.html</filename>
+        <folder>images</folder>
+        <folder>js</folder>
+        <folder>css</folder>
+    </media>
+    <languages>
+        <language tag="zh-CN">language/zh-CN/zh-CN.mod_lunbo.ini</language>
+        <language tag="zh-CN">language/zh-CN/zh-CN.mod_lunbo.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+                <fieldset name="basic">
+                    <field
+                            name="width"
+                            type="text"
+                            label="MOD_LUNBO_FIELD_WIDTH_LABEL"
+                            description="MOD_LUNBO_FIELD_WIDTH_DESC" />
+                    <field
+                            name="height"
+                            type="text"
+                            label="MOD_LUNBO_FIELD_HEIGHT_LABEL"
+                            description="MOD_LUNBO_FIELD_HEIGHT_DESC" />
+                    <field
+                            name="auto"
+                            type="list"
+                            label="MOD_LUNBO_FIELD_AUTO_LABEL"
+                            description="MOD_LUNBO_FIELD_AUTO_DESC">
+                        <option value="true">MOD_LUNBO_ISAUTO_TRUE</option>
+                        <option value="false">MOD_LUNBO_ISAUTO_FALSE</option>
+                    </field>
+                    <field
+                            name="img_1"
+                            type="media"
+                            label="MOD_LUNBO_FIELD_IMG_1_LABEL"
+                            description="MOD_LUNBO_FIELD_IMG_1_DESC">
+                    </field>
+
+                    <field
+                            name="img_2"
+                            type="media"
+                            label="MOD_LUNBO_FIELD_IMG_2_LABEL"
+                            description="MOD_LUNBO_FIELD_IMG_2_DESC">
+                    </field>
+                    <field
+                            name="img_3"
+                            type="media"
+                            label="MOD_LUNBO_FIELD_IMG_3_LABEL"
+                            description="MOD_LUNBO_FIELD_IMG_3_DESC">
+                    </field>
+                </fieldset>
+        </fields>
+    </config>
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/mysql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/mysql/uninstall.mysql.utf8.sql</file>
+
+        </sql>
+    </uninstall>
+
+    <update>
+        <schemas>
+            <schemapath type="mysql">sql/mysql/updates</schemapath>
+        </schemas>
+    </update>
+</extension>

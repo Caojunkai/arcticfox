@@ -49,6 +49,8 @@
     <media destination="com_wing" folder="media">
         <filename>index.html</filename>
         <folder>images</folder>
+        <folder>css</folder>
+        <folder>js</folder>
     </media>
 
     <administration>
