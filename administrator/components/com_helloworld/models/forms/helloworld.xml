@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <form>
 	<fieldset>
-	<field
+		<field
 			name="id"
 			type="hidden"
-	/>
-	<field
+		/>
+		<field
 			name="greeting"
 			type="text"
 			label="COM_HELLOWORLD_HELLOWORLD_GREETING_LABEL"
@@ -13,6 +13,12 @@
 			size="40"
 			class="inputbox"
 			default=""
-	/>
+		/>
+		<field
+				name="topic"
+				type="City"
+				label="选择"
+				description="ttttt"
+		/>
 	</fieldset>
 </form>
