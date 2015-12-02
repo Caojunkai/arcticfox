@@ -1,0 +1,95 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Overlay
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@overlay-panel-color:                           @global-contrast-color;
+
+@overlay-panel-background:                      rgba(46,42,42, 0.8);
+
+@overlay-icon-color:                            @global-contrast-color;
+
+//
+// New
+//
+
+@overlay-button-border:                          @global-contrast-color;
+@overlay-button-border-bottom:                   @global-contrast-color;
+@overlay-button-color:                           @global-contrast-color;
+@overlay-button-active-color:                    @global-color;
+
+@overlay-button-primary-border:                  rgba(0,0,0,0);
+@overlay-button-primary-border-bottom:           darken(@global-primary-background, 20%);
+@overlay-button-primary-color:                   @global-contrast-color;
+@overlay-button-primary-active-color:            @global-contrast-color;
+
+@overlay-icon-button-border:                     @global-contrast-color;
+@overlay-icon-button-color:                      @overlay-icon-button-border;
+@overlay-icon-button-active-color:               @global-color;
+
+
+// Sub-object `uk-overlay-panel`
+// ========================================================================
+
+.hook-overlay-panel() {
+
+        a:not([class]):hover { text-decoration: none; }
+
+        // Button
+        .uk-button:not(.uk-button-primary):not(.uk-button-success):not(.uk-button-danger) {
+            border-color: @overlay-button-border;
+            color: @overlay-button-color;
+
+            &:before { background-color: @overlay-button-border-bottom; }
+            &:active,
+            &.uk-active { color: @overlay-button-active-color; }
+
+        }
+
+        // Button Primary
+        .uk-button-primary {
+            border-color: @overlay-button-primary-border;
+            color: @overlay-button-primary-color;
+
+            &:before { background-color: @overlay-button-primary-border-bottom; }
+            &:active,
+            &.uk-active { color: @overlay-button-primary-active-color; }
+
+        }
+
+        // Icon Button
+        .uk-icon-button {
+            border-color: @overlay-icon-button-border;
+            color: @overlay-icon-button-color;
+
+            &:after { background-color: @overlay-icon-button-border; }
+            &:active,
+            &.uk-active { color: @overlay-icon-button-active-color; }
+
+        }
+
+}
+
+
+// Sub-object `uk-overlay-background`
+// ========================================================================
+
+.hook-overlay-background() {}
+
+
+// Sub-object `uk-overlay-icon`
+// ========================================================================
+
+.hook-overlay-icon() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-overlay-misc() {}

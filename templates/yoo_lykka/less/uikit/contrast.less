@@ -1,0 +1,142 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Contrast
+//
+// ========================================================================
+
+@contrast-color:                                 @global-contrast-color;
+@contrast-inverted-color:                        #333;
+
+@contrast-button-color:                          @contrast-color;
+@contrast-icon-button-color:                     @contrast-color;
+@contrast-button-active-color:                   @global-color;
+@contrast-icon-button-hover-color:               @contrast-color;
+@contrast-icon-button-active-color:              @global-color;
+
+@contrast-nav-side-hover-background:             rgba(0,0,0,0);
+@contrast-nav-side-active-background:            rgba(0,0,0,0);
+@contrast-nav-side-active-color:                 @contrast-color;
+@contrast-nav-side-divider-border:               fade(@contrast-color, 30%);
+
+@contrast-subnav-pill-hover-background:          rgba(0,0,0,0);
+@contrast-subnav-pill-hover-color:               @contrast-color;
+@contrast-subnav-pill-active-background:         rgba(0,0,0,0);
+@contrast-subnav-pill-active-color:              @contrast-color;
+
+@contrast-form-background:                       rgba(0,0,0,0);
+@contrast-form-color:                            fade(@contrast-color, 30%);
+@contrast-form-focus-background:                 rgba(0,0,0,0);
+@contrast-form-focus-color:                      @contrast-color;
+@contrast-form-placeholder-color:                @contrast-color;
+
+@contrast-button-background:                     rgba(0,0,0,0);
+@contrast-button-hover-color:                    @contrast-color;
+@contrast-button-hover-background:               rgba(0,0,0,0);
+@contrast-button-active-background:              rgba(0,0,0,0);
+@contrast-button-active-color:                   @contrast-inverted-color;
+
+@contrast-icon-button-background:                rgba(0,0,0,0);
+@contrast-icon-button-hover-background:          rgba(0,0,0,0);
+@contrast-icon-button-active-background:         rgba(0,0,0,0);
+@contrast-icon-button-active-color:              @contrast-inverted-color;
+
+//
+// New
+//
+
+@contrast-panel-header-icon-color:               rgba(255,255,255,0.3);
+@contrast-button-border:                         @global-contrast-color;
+@contrast-button-border-bottom:                  @contrast-button-border;
+@contrast-button-primary-border:                 rgba(0,0,0,0);
+@contrast-button-primary-border-bottom:          rgba(0,0,0,0);
+@contrast-icon-button-border:                    @contrast-color;
+@contrast-border:                                fade(@contrast-color, 30%);
+@contrast-subnav-active-border:                  @contrast-color;
+
+
+// Base
+// ========================================================================
+
+.hook-contrast-base-code() {}
+
+
+// Nav
+// ========================================================================
+
+.hook-contrast-nav-side() { box-shadow: 0 @global-border-width 0 0 @contrast-border; }
+.hook-contrast-nav-side-hover() { box-shadow: 0 @nav-side-divider-border-width 0 0 @contrast-color; }
+.hook-contrast-nav-side-active() { box-shadow: 0 @nav-side-divider-border-width 0 0 @contrast-color; }
+.hook-contrast-nav-side-header() {}
+.hook-contrast-nav-side-divider() {}
+
+
+// Subnav
+// ========================================================================
+
+.hook-contrast-subnav() {}
+.hook-contrast-subnav-hover() {}
+.hook-contrast-subnav-active() { border-color: @contrast-subnav-active-border; }
+.hook-contrast-subnav-line-divider() {}
+.hook-contrast-subnav-pill-hover() {}
+.hook-contrast-subnav-pill-active() {}
+
+
+// List
+// ========================================================================
+
+.hook-contrast-list-line() {}
+
+// Form
+// ========================================================================
+
+.hook-contrast-form() {}
+.hook-contrast-form-focus() {}
+
+
+// Button
+// ========================================================================
+
+.hook-contrast-button() {
+
+    &:not(.uk-button-primary) {
+
+        border-color: @contrast-button-border;
+        &:before { background-color: @contrast-button-border-bottom; }
+
+    }
+
+}
+
+.hook-contrast-button-hover() {}
+.hook-contrast-button-active() {}
+.hook-contrast-button-primary() {
+
+    border-color: @contrast-button-primary-border;
+    &:before { background-color: @contrast-button-primary-border-bottom; }
+
+}
+.hook-contrast-button-primary-hover() {}
+.hook-contrast-button-primary-active() {}
+
+
+// Icon
+// ========================================================================
+
+.hook-contrast-icon-hover() {}
+.hook-contrast-icon-hover-hover() {}
+.hook-contrast-icon-button() {
+
+    border-color: @contrast-icon-button-border;
+    &:after { background-color: @contrast-icon-button-border; }
+
+}
+
+.hook-contrast-icon-button-hover() {}
+.hook-contrast-icon-button-active() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-contrast-misc() {}

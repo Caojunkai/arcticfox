@@ -1,0 +1,3510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - arctic@localhost" uuid="76dce0fa-4e30-44cc-a283-5b1e14e2919e">
+    <database-info product="MySQL" version="5.5.40" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.2">
+      <schema id="1" name="arctic"/>
+      <table id="2" parent="1" name="arctic_assets"/>
+      <table id="3" parent="1" name="arctic_associations"/>
+      <table id="4" parent="1" name="arctic_banner_clients"/>
+      <table id="5" parent="1" name="arctic_banner_tracks"/>
+      <table id="6" parent="1" name="arctic_banners"/>
+      <table id="7" parent="1" name="arctic_categories"/>
+      <table id="8" parent="1" name="arctic_contact_details"/>
+      <table id="9" parent="1" name="arctic_content"/>
+      <table id="10" parent="1" name="arctic_content_frontpage"/>
+      <table id="11" parent="1" name="arctic_content_rating"/>
+      <table id="12" parent="1" name="arctic_content_types"/>
+      <table id="13" parent="1" name="arctic_contentitem_tag_map"/>
+      <table id="14" parent="1" name="arctic_core_log_searches"/>
+      <table id="15" parent="1" name="arctic_extensions"/>
+      <table id="16" parent="1" name="arctic_extensions_copy"/>
+      <table id="17" parent="1" name="arctic_finder_filters"/>
+      <table id="18" parent="1" name="arctic_finder_links"/>
+      <table id="19" parent="1" name="arctic_finder_links_terms0"/>
+      <table id="20" parent="1" name="arctic_finder_links_terms1"/>
+      <table id="21" parent="1" name="arctic_finder_links_terms2"/>
+      <table id="22" parent="1" name="arctic_finder_links_terms3"/>
+      <table id="23" parent="1" name="arctic_finder_links_terms4"/>
+      <table id="24" parent="1" name="arctic_finder_links_terms5"/>
+      <table id="25" parent="1" name="arctic_finder_links_terms6"/>
+      <table id="26" parent="1" name="arctic_finder_links_terms7"/>
+      <table id="27" parent="1" name="arctic_finder_links_terms8"/>
+      <table id="28" parent="1" name="arctic_finder_links_terms9"/>
+      <table id="29" parent="1" name="arctic_finder_links_termsa"/>
+      <table id="30" parent="1" name="arctic_finder_links_termsb"/>
+      <table id="31" parent="1" name="arctic_finder_links_termsc"/>
+      <table id="32" parent="1" name="arctic_finder_links_termsd"/>
+      <table id="33" parent="1" name="arctic_finder_links_termse"/>
+      <table id="34" parent="1" name="arctic_finder_links_termsf"/>
+      <table id="35" parent="1" name="arctic_finder_taxonomy"/>
+      <table id="36" parent="1" name="arctic_finder_taxonomy_map"/>
+      <table id="37" parent="1" name="arctic_finder_terms"/>
+      <table id="38" parent="1" name="arctic_finder_terms_common"/>
+      <table id="39" parent="1" name="arctic_finder_tokens"/>
+      <table id="40" parent="1" name="arctic_finder_tokens_aggregate"/>
+      <table id="41" parent="1" name="arctic_finder_types"/>
+      <table id="42" parent="1" name="arctic_helloworld"/>
+      <table id="43" parent="1" name="arctic_languages"/>
+      <table id="44" parent="1" name="arctic_lunbo"/>
+      <table id="45" parent="1" name="arctic_menu"/>
+      <table id="46" parent="1" name="arctic_menu_types"/>
+      <table id="47" parent="1" name="arctic_messages"/>
+      <table id="48" parent="1" name="arctic_messages_cfg"/>
+      <table id="49" parent="1" name="arctic_modules"/>
+      <table id="50" parent="1" name="arctic_modules_menu"/>
+      <table id="51" parent="1" name="arctic_newsfeeds"/>
+      <table id="52" parent="1" name="arctic_overrider"/>
+      <table id="53" parent="1" name="arctic_postinstall_messages"/>
+      <table id="54" parent="1" name="arctic_redirect_links"/>
+      <table id="55" parent="1" name="arctic_schemas"/>
+      <table id="56" parent="1" name="arctic_session"/>
+      <table id="57" parent="1" name="arctic_tags"/>
+      <table id="58" parent="1" name="arctic_template_styles"/>
+      <table id="59" parent="1" name="arctic_ucm_base"/>
+      <table id="60" parent="1" name="arctic_ucm_content"/>
+      <table id="61" parent="1" name="arctic_ucm_history"/>
+      <table id="62" parent="1" name="arctic_update_sites"/>
+      <table id="63" parent="1" name="arctic_update_sites_extensions"/>
+      <table id="64" parent="1" name="arctic_updates"/>
+      <table id="65" parent="1" name="arctic_user_keys"/>
+      <table id="66" parent="1" name="arctic_user_notes"/>
+      <table id="67" parent="1" name="arctic_user_profiles"/>
+      <table id="68" parent="1" name="arctic_user_usergroup_map"/>
+      <table id="69" parent="1" name="arctic_usergroups"/>
+      <table id="70" parent="1" name="arctic_users"/>
+      <table id="71" parent="1" name="arctic_viewlevels"/>
+      <table id="72" parent="1" name="arctic_wing_img"/>
+      <table id="73" parent="1" name="#__lunbo"/>
+      <column id="74" parent="2" name="id">
+        <comment>Primary Key</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="75" parent="2" name="parent_id">
+        <comment>Nested set parent.</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="76" parent="2" name="lft">
+        <comment>Nested set lft.</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="77" parent="2" name="rgt">
+        <comment>Nested set rgt.</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="78" parent="2" name="level">
+        <comment>The cached level in the nested tree.</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="79" parent="2" name="name">
+        <comment>The unique name for the asset.
+</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="80" parent="2" name="title">
+        <comment>The descriptive title for the asset.</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="81" parent="2" name="rules">
+        <comment>JSON encoded access control.</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(5120)</data-type>
+      </column>
+      <index id="82" parent="2" name="idx_asset_name">
+        <columns>name</columns>
+        <unique>1</unique>
+      </index>
+      <key id="83" parent="2" name="idx_asset_name">
+        <columns>name</columns>
+        <underlying-index>idx_asset_name</underlying-index>
+      </key>
+      <key id="84" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="85" parent="3" name="id">
+        <comment>A reference to the associated item.</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="86" parent="3" name="context">
+        <comment>The context of the associated item.</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="87" parent="3" name="key">
+        <comment>The key for the association computed from an md5 on associated ids.</comment>
+        <mandatory>1</mandatory>
+        <data-type>char(32)</data-type>
+      </column>
+      <key id="88" parent="3" name="PRIMARY">
+        <columns>context
+id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="89" parent="4" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="90" parent="4" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="91" parent="4" name="contact">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="92" parent="4" name="email">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="93" parent="4" name="extrainfo">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="94" parent="4" name="state">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(3)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="95" parent="4" name="checked_out">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="96" parent="4" name="checked_out_time">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="97" parent="4" name="metakey">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="98" parent="4" name="own_prefix">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="99" parent="4" name="metakey_prefix">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="100" parent="4" name="purchase_type">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;-1&apos;</default-expression>
+      </column>
+      <column id="101" parent="4" name="track_clicks">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;-1&apos;</default-expression>
+      </column>
+      <column id="102" parent="4" name="track_impressions">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;-1&apos;</default-expression>
+      </column>
+      <key id="103" parent="4" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="104" parent="5" name="track_date">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="105" parent="5" name="track_type">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="106" parent="5" name="banner_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="107" parent="5" name="count">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <key id="108" parent="5" name="PRIMARY">
+        <columns>track_date
+track_type
+banner_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="109" parent="6" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="110" parent="6" name="cid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="111" parent="6" name="type">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="112" parent="6" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="113" parent="6" name="alias">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="114" parent="6" name="imptotal">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="115" parent="6" name="impmade">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="116" parent="6" name="clicks">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="117" parent="6" name="clickurl">
+        <mandatory>1</mandatory>
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="118" parent="6" name="state">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(3)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="119" parent="6" name="catid">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="120" parent="6" name="description">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="121" parent="6" name="custombannercode">
+        <mandatory>1</mandatory>
+        <data-type>varchar(2048)</data-type>
+      </column>
+      <column id="122" parent="6" name="sticky">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="123" parent="6" name="ordering">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="124" parent="6" name="metakey">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="125" parent="6" name="params">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="126" parent="6" name="own_prefix">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="127" parent="6" name="metakey_prefix">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="128" parent="6" name="purchase_type">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;-1&apos;</default-expression>
+      </column>
+      <column id="129" parent="6" name="track_clicks">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;-1&apos;</default-expression>
+      </column>
+      <column id="130" parent="6" name="track_impressions">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;-1&apos;</default-expression>
+      </column>
+      <column id="131" parent="6" name="checked_out">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="132" parent="6" name="checked_out_time">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="133" parent="6" name="publish_up">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="134" parent="6" name="publish_down">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="135" parent="6" name="reset">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="136" parent="6" name="created">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="137" parent="6" name="language">
+        <mandatory>1</mandatory>
+        <data-type>char(7)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="138" parent="6" name="created_by">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="139" parent="6" name="created_by_alias">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="140" parent="6" name="modified">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="141" parent="6" name="modified_by">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="142" parent="6" name="version">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <key id="143" parent="6" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="144" parent="7" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="145" parent="7" name="asset_id">
+        <comment>FK to the #__assets table.</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="146" parent="7" name="parent_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="147" parent="7" name="lft">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="148" parent="7" name="rgt">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="149" parent="7" name="level">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="150" parent="7" name="path">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="151" parent="7" name="extension">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="152" parent="7" name="title">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="153" parent="7" name="alias">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="154" parent="7" name="note">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="155" parent="7" name="description">
+        <mandatory>1</mandatory>
+        <data-type>mediumtext</data-type>
+      </column>
+      <column id="156" parent="7" name="published">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="157" parent="7" name="checked_out">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="158" parent="7" name="checked_out_time">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="159" parent="7" name="access">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="160" parent="7" name="params">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="161" parent="7" name="metadesc">
+        <comment>The meta description for the page.</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1024)</data-type>
+      </column>
+      <column id="162" parent="7" name="metakey">
+        <comment>The meta keywords for the page.</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1024)</data-type>
+      </column>
+      <column id="163" parent="7" name="metadata">
+        <comment>JSON encoded metadata properties.</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(2048)</data-type>
+      </column>
+      <column id="164" parent="7" name="created_user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="165" parent="7" name="created_time">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="166" parent="7" name="modified_user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="167" parent="7" name="modified_time">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="168" parent="7" name="hits">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="169" parent="7" name="language">
+        <mandatory>1</mandatory>
+        <data-type>char(7)</data-type>
+      </column>
+      <column id="170" parent="7" name="version">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <key id="171" parent="7" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="172" parent="8" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="173" parent="8" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="174" parent="8" name="alias">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="175" parent="8" name="con_position">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="176" parent="8" name="address">
+        <data-type>text</data-type>
+      </column>
+      <column id="177" parent="8" name="suburb">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="178" parent="8" name="state">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="179" parent="8" name="country">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="180" parent="8" name="postcode">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="181" parent="8" name="telephone">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="182" parent="8" name="fax">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="183" parent="8" name="misc">
+        <data-type>mediumtext</data-type>
+      </column>
+      <column id="184" parent="8" name="image">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="185" parent="8" name="email_to">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="186" parent="8" name="default_con">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="187" parent="8" name="published">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="188" parent="8" name="checked_out">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="189" parent="8" name="checked_out_time">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="190" parent="8" name="ordering">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="191" parent="8" name="params">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="192" parent="8" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="193" parent="8" name="catid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="194" parent="8" name="access">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="195" parent="8" name="mobile">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="196" parent="8" name="webpage">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="197" parent="8" name="sortname1">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="198" parent="8" name="sortname2">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="199" parent="8" name="sortname3">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="200" parent="8" name="language">
+        <mandatory>1</mandatory>
+        <data-type>char(7)</data-type>
+      </column>
+      <column id="201" parent="8" name="created">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="202" parent="8" name="created_by">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="203" parent="8" name="created_by_alias">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="204" parent="8" name="modified">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="205" parent="8" name="modified_by">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="206" parent="8" name="metakey">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="207" parent="8" name="metadesc">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="208" parent="8" name="metadata">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="209" parent="8" name="featured">
+        <comment>Set if article is featured.</comment>
+        <mandatory>1</mandatory>
+        <data-type>tinyint(3) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="210" parent="8" name="xreference">
+        <comment>A reference to enable linkages to external data sets.</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="211" parent="8" name="publish_up">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="212" parent="8" name="publish_down">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="213" parent="8" name="version">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="214" parent="8" name="hits">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <key id="215" parent="8" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="216" parent="9" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="217" parent="9" name="asset_id">
+        <comment>FK to the #__assets table.</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="218" parent="9" name="title">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="219" parent="9" name="alias">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="220" parent="9" name="introtext">
+        <mandatory>1</mandatory>
+        <data-type>mediumtext</data-type>
+      </column>
+      <column id="221" parent="9" name="fulltext">
+        <mandatory>1</mandatory>
+        <data-type>mediumtext</data-type>
+      </column>
+      <column id="222" parent="9" name="state">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(3)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="223" parent="9" name="catid">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="224" parent="9" name="created">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="225" parent="9" name="created_by">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="226" parent="9" name="created_by_alias">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="227" parent="9" name="modified">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="228" parent="9" name="modified_by">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="229" parent="9" name="checked_out">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="230" parent="9" name="checked_out_time">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="231" parent="9" name="publish_up">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="232" parent="9" name="publish_down">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="233" parent="9" name="images">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="234" parent="9" name="urls">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="235" parent="9" name="attribs">
+        <mandatory>1</mandatory>
+        <data-type>varchar(5120)</data-type>
+      </column>
+      <column id="236" parent="9" name="version">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="237" parent="9" name="ordering">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="238" parent="9" name="metakey">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="239" parent="9" name="metadesc">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="240" parent="9" name="access">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="241" parent="9" name="hits">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="242" parent="9" name="metadata">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="243" parent="9" name="featured">
+        <comment>Set if article is featured.</comment>
+        <mandatory>1</mandatory>
+        <data-type>tinyint(3) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="244" parent="9" name="language">
+        <comment>The language code for the article.</comment>
+        <mandatory>1</mandatory>
+        <data-type>char(7)</data-type>
+      </column>
+      <column id="245" parent="9" name="xreference">
+        <comment>A reference to enable linkages to external data sets.</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <key id="246" parent="9" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="247" parent="10" name="content_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="248" parent="10" name="ordering">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <key id="249" parent="10" name="PRIMARY">
+        <columns>content_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="250" parent="11" name="content_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="251" parent="11" name="rating_sum">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="252" parent="11" name="rating_count">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="253" parent="11" name="lastip">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <key id="254" parent="11" name="PRIMARY">
+        <columns>content_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="255" parent="12" name="type_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="256" parent="12" name="type_title">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="257" parent="12" name="type_alias">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="258" parent="12" name="table">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="259" parent="12" name="rules">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="260" parent="12" name="field_mappings">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="261" parent="12" name="router">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="262" parent="12" name="content_history_options">
+        <comment>JSON string for com_contenthistory options</comment>
+        <data-type>varchar(5120)</data-type>
+      </column>
+      <key id="263" parent="12" name="PRIMARY">
+        <columns>type_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="264" parent="13" name="type_alias">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="265" parent="13" name="core_content_id">
+        <comment>PK from the core content table</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="266" parent="13" name="content_item_id">
+        <comment>PK from the content type table</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="267" parent="13" name="tag_id">
+        <comment>PK from the tag table</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="268" parent="13" name="tag_date">
+        <comment>Date of most recent save for this tag-item</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="269" parent="13" name="type_id">
+        <comment>PK from the content_type table</comment>
+        <mandatory>1</mandatory>
+        <data-type>mediumint(8)</data-type>
+      </column>
+      <index id="270" parent="13" name="uc_ItemnameTagid">
+        <columns>type_id
+content_item_id
+tag_id</columns>
+        <unique>1</unique>
+      </index>
+      <key id="271" parent="13" name="uc_ItemnameTagid">
+        <columns>type_id
+content_item_id
+tag_id</columns>
+        <underlying-index>uc_ItemnameTagid</underlying-index>
+      </key>
+      <column id="272" parent="14" name="search_term">
+        <mandatory>1</mandatory>
+        <data-type>varchar(128)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="273" parent="14" name="hits">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="274" parent="15" name="extension_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="275" parent="15" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="276" parent="15" name="type">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="277" parent="15" name="element">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="278" parent="15" name="folder">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="279" parent="15" name="client_id">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(3)</data-type>
+      </column>
+      <column id="280" parent="15" name="enabled">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(3)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="281" parent="15" name="access">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="282" parent="15" name="protected">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(3)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="283" parent="15" name="manifest_cache">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="284" parent="15" name="params">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="285" parent="15" name="custom_data">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="286" parent="15" name="system_data">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="287" parent="15" name="checked_out">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="288" parent="15" name="checked_out_time">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="289" parent="15" name="ordering">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="290" parent="15" name="state">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <key id="291" parent="15" name="PRIMARY">
+        <columns>extension_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="292" parent="16" name="extension_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="293" parent="16" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="294" parent="16" name="type">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="295" parent="16" name="element">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="296" parent="16" name="folder">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="297" parent="16" name="client_id">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(3)</data-type>
+      </column>
+      <column id="298" parent="16" name="enabled">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(3)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="299" parent="16" name="access">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="300" parent="16" name="protected">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(3)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="301" parent="16" name="manifest_cache">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="302" parent="16" name="params">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="303" parent="16" name="custom_data">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="304" parent="16" name="system_data">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="305" parent="16" name="checked_out">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="306" parent="16" name="checked_out_time">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="307" parent="16" name="ordering">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="308" parent="16" name="state">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <key id="309" parent="16" name="PRIMARY">
+        <columns>extension_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="310" parent="17" name="filter_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="311" parent="17" name="title">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="312" parent="17" name="alias">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="313" parent="17" name="state">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="314" parent="17" name="created">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="315" parent="17" name="created_by">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="316" parent="17" name="created_by_alias">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="317" parent="17" name="modified">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="318" parent="17" name="modified_by">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="319" parent="17" name="checked_out">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="320" parent="17" name="checked_out_time">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="321" parent="17" name="map_count">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="322" parent="17" name="data">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="323" parent="17" name="params">
+        <data-type>mediumtext</data-type>
+      </column>
+      <key id="324" parent="17" name="PRIMARY">
+        <columns>filter_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="325" parent="18" name="link_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="326" parent="18" name="url">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="327" parent="18" name="route">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="328" parent="18" name="title">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="329" parent="18" name="description">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="330" parent="18" name="indexdate">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="331" parent="18" name="md5sum">
+        <data-type>varchar(32)</data-type>
+      </column>
+      <column id="332" parent="18" name="published">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="333" parent="18" name="state">
+        <data-type>int(5)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="334" parent="18" name="access">
+        <data-type>int(5)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="335" parent="18" name="language">
+        <mandatory>1</mandatory>
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="336" parent="18" name="publish_start_date">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="337" parent="18" name="publish_end_date">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="338" parent="18" name="start_date">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="339" parent="18" name="end_date">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="340" parent="18" name="list_price">
+        <mandatory>1</mandatory>
+        <data-type>double unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="341" parent="18" name="sale_price">
+        <mandatory>1</mandatory>
+        <data-type>double unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="342" parent="18" name="type_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="343" parent="18" name="object">
+        <mandatory>1</mandatory>
+        <data-type>mediumblob</data-type>
+      </column>
+      <key id="344" parent="18" name="PRIMARY">
+        <columns>link_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="345" parent="19" name="link_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="346" parent="19" name="term_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="347" parent="19" name="weight">
+        <mandatory>1</mandatory>
+        <data-type>float unsigned</data-type>
+      </column>
+      <key id="348" parent="19" name="PRIMARY">
+        <columns>link_id
+term_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="349" parent="20" name="link_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="350" parent="20" name="term_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="351" parent="20" name="weight">
+        <mandatory>1</mandatory>
+        <data-type>float unsigned</data-type>
+      </column>
+      <key id="352" parent="20" name="PRIMARY">
+        <columns>link_id
+term_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="353" parent="21" name="link_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="354" parent="21" name="term_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="355" parent="21" name="weight">
+        <mandatory>1</mandatory>
+        <data-type>float unsigned</data-type>
+      </column>
+      <key id="356" parent="21" name="PRIMARY">
+        <columns>link_id
+term_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="357" parent="22" name="link_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="358" parent="22" name="term_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="359" parent="22" name="weight">
+        <mandatory>1</mandatory>
+        <data-type>float unsigned</data-type>
+      </column>
+      <key id="360" parent="22" name="PRIMARY">
+        <columns>link_id
+term_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="361" parent="23" name="link_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="362" parent="23" name="term_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="363" parent="23" name="weight">
+        <mandatory>1</mandatory>
+        <data-type>float unsigned</data-type>
+      </column>
+      <key id="364" parent="23" name="PRIMARY">
+        <columns>link_id
+term_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="365" parent="24" name="link_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="366" parent="24" name="term_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="367" parent="24" name="weight">
+        <mandatory>1</mandatory>
+        <data-type>float unsigned</data-type>
+      </column>
+      <key id="368" parent="24" name="PRIMARY">
+        <columns>link_id
+term_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="369" parent="25" name="link_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="370" parent="25" name="term_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="371" parent="25" name="weight">
+        <mandatory>1</mandatory>
+        <data-type>float unsigned</data-type>
+      </column>
+      <key id="372" parent="25" name="PRIMARY">
+        <columns>link_id
+term_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="373" parent="26" name="link_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="374" parent="26" name="term_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="375" parent="26" name="weight">
+        <mandatory>1</mandatory>
+        <data-type>float unsigned</data-type>
+      </column>
+      <key id="376" parent="26" name="PRIMARY">
+        <columns>link_id
+term_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="377" parent="27" name="link_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="378" parent="27" name="term_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="379" parent="27" name="weight">
+        <mandatory>1</mandatory>
+        <data-type>float unsigned</data-type>
+      </column>
+      <key id="380" parent="27" name="PRIMARY">
+        <columns>link_id
+term_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="381" parent="28" name="link_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="382" parent="28" name="term_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="383" parent="28" name="weight">
+        <mandatory>1</mandatory>
+        <data-type>float unsigned</data-type>
+      </column>
+      <key id="384" parent="28" name="PRIMARY">
+        <columns>link_id
+term_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="385" parent="29" name="link_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="386" parent="29" name="term_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="387" parent="29" name="weight">
+        <mandatory>1</mandatory>
+        <data-type>float unsigned</data-type>
+      </column>
+      <key id="388" parent="29" name="PRIMARY">
+        <columns>link_id
+term_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="389" parent="30" name="link_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="390" parent="30" name="term_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="391" parent="30" name="weight">
+        <mandatory>1</mandatory>
+        <data-type>float unsigned</data-type>
+      </column>
+      <key id="392" parent="30" name="PRIMARY">
+        <columns>link_id
+term_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="393" parent="31" name="link_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="394" parent="31" name="term_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="395" parent="31" name="weight">
+        <mandatory>1</mandatory>
+        <data-type>float unsigned</data-type>
+      </column>
+      <key id="396" parent="31" name="PRIMARY">
+        <columns>link_id
+term_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="397" parent="32" name="link_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="398" parent="32" name="term_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="399" parent="32" name="weight">
+        <mandatory>1</mandatory>
+        <data-type>float unsigned</data-type>
+      </column>
+      <key id="400" parent="32" name="PRIMARY">
+        <columns>link_id
+term_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="401" parent="33" name="link_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="402" parent="33" name="term_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="403" parent="33" name="weight">
+        <mandatory>1</mandatory>
+        <data-type>float unsigned</data-type>
+      </column>
+      <key id="404" parent="33" name="PRIMARY">
+        <columns>link_id
+term_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="405" parent="34" name="link_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="406" parent="34" name="term_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="407" parent="34" name="weight">
+        <mandatory>1</mandatory>
+        <data-type>float unsigned</data-type>
+      </column>
+      <key id="408" parent="34" name="PRIMARY">
+        <columns>link_id
+term_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="409" parent="35" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="410" parent="35" name="parent_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="411" parent="35" name="title">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="412" parent="35" name="state">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1) unsigned</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="413" parent="35" name="access">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="414" parent="35" name="ordering">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <key id="415" parent="35" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="416" parent="36" name="link_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="417" parent="36" name="node_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <key id="418" parent="36" name="PRIMARY">
+        <columns>link_id
+node_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="419" parent="37" name="term_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="420" parent="37" name="term">
+        <mandatory>1</mandatory>
+        <data-type>varchar(75)</data-type>
+      </column>
+      <column id="421" parent="37" name="stem">
+        <mandatory>1</mandatory>
+        <data-type>varchar(75)</data-type>
+      </column>
+      <column id="422" parent="37" name="common">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="423" parent="37" name="phrase">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="424" parent="37" name="weight">
+        <mandatory>1</mandatory>
+        <data-type>float unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="425" parent="37" name="soundex">
+        <mandatory>1</mandatory>
+        <data-type>varchar(75)</data-type>
+      </column>
+      <column id="426" parent="37" name="links">
+        <mandatory>1</mandatory>
+        <data-type>int(10)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="427" parent="37" name="language">
+        <mandatory>1</mandatory>
+        <data-type>char(3)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <index id="428" parent="37" name="idx_term">
+        <columns>term</columns>
+        <unique>1</unique>
+      </index>
+      <key id="429" parent="37" name="idx_term">
+        <columns>term</columns>
+        <underlying-index>idx_term</underlying-index>
+      </key>
+      <key id="430" parent="37" name="PRIMARY">
+        <columns>term_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="431" parent="38" name="term">
+        <mandatory>1</mandatory>
+        <data-type>varchar(75)</data-type>
+      </column>
+      <column id="432" parent="38" name="language">
+        <mandatory>1</mandatory>
+        <data-type>varchar(3)</data-type>
+      </column>
+      <column id="433" parent="39" name="term">
+        <mandatory>1</mandatory>
+        <data-type>varchar(75)</data-type>
+      </column>
+      <column id="434" parent="39" name="stem">
+        <mandatory>1</mandatory>
+        <data-type>varchar(75)</data-type>
+      </column>
+      <column id="435" parent="39" name="common">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="436" parent="39" name="phrase">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="437" parent="39" name="weight">
+        <mandatory>1</mandatory>
+        <data-type>float unsigned</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="438" parent="39" name="context">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1) unsigned</data-type>
+        <default-expression>&apos;2&apos;</default-expression>
+      </column>
+      <column id="439" parent="39" name="language">
+        <mandatory>1</mandatory>
+        <data-type>char(3)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="440" parent="40" name="term_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="441" parent="40" name="map_suffix">
+        <mandatory>1</mandatory>
+        <data-type>char(1)</data-type>
+      </column>
+      <column id="442" parent="40" name="term">
+        <mandatory>1</mandatory>
+        <data-type>varchar(75)</data-type>
+      </column>
+      <column id="443" parent="40" name="stem">
+        <mandatory>1</mandatory>
+        <data-type>varchar(75)</data-type>
+      </column>
+      <column id="444" parent="40" name="common">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="445" parent="40" name="phrase">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="446" parent="40" name="term_weight">
+        <mandatory>1</mandatory>
+        <data-type>float unsigned</data-type>
+      </column>
+      <column id="447" parent="40" name="context">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1) unsigned</data-type>
+        <default-expression>&apos;2&apos;</default-expression>
+      </column>
+      <column id="448" parent="40" name="context_weight">
+        <mandatory>1</mandatory>
+        <data-type>float unsigned</data-type>
+      </column>
+      <column id="449" parent="40" name="total_weight">
+        <mandatory>1</mandatory>
+        <data-type>float unsigned</data-type>
+      </column>
+      <column id="450" parent="40" name="language">
+        <mandatory>1</mandatory>
+        <data-type>char(3)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="451" parent="41" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="452" parent="41" name="title">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="453" parent="41" name="mime">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <index id="454" parent="41" name="title">
+        <columns>title</columns>
+        <unique>1</unique>
+      </index>
+      <key id="455" parent="41" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <key id="456" parent="41" name="title">
+        <columns>title</columns>
+        <underlying-index>title</underlying-index>
+      </key>
+      <column id="457" parent="42" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="458" parent="42" name="greeting">
+        <mandatory>1</mandatory>
+        <data-type>varchar(25)</data-type>
+      </column>
+      <column id="459" parent="42" name="published">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(4)</data-type>
+      </column>
+      <key id="460" parent="42" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="461" parent="43" name="lang_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned</data-type>
+      </column>
+      <column id="462" parent="43" name="lang_code">
+        <mandatory>1</mandatory>
+        <data-type>char(7)</data-type>
+      </column>
+      <column id="463" parent="43" name="title">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="464" parent="43" name="title_native">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="465" parent="43" name="sef">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="466" parent="43" name="image">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="467" parent="43" name="description">
+        <mandatory>1</mandatory>
+        <data-type>varchar(512)</data-type>
+      </column>
+      <column id="468" parent="43" name="metakey">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="469" parent="43" name="metadesc">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="470" parent="43" name="sitename">
+        <mandatory>1</mandatory>
+        <data-type>varchar(1024)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="471" parent="43" name="published">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="472" parent="43" name="access">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="473" parent="43" name="ordering">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <index id="474" parent="43" name="idx_image">
+        <columns>image</columns>
+        <unique>1</unique>
+      </index>
+      <index id="475" parent="43" name="idx_langcode">
+        <columns>lang_code</columns>
+        <unique>1</unique>
+      </index>
+      <index id="476" parent="43" name="idx_sef">
+        <columns>sef</columns>
+        <unique>1</unique>
+      </index>
+      <key id="477" parent="43" name="idx_image">
+        <columns>image</columns>
+        <underlying-index>idx_image</underlying-index>
+      </key>
+      <key id="478" parent="43" name="idx_langcode">
+        <columns>lang_code</columns>
+        <underlying-index>idx_langcode</underlying-index>
+      </key>
+      <key id="479" parent="43" name="idx_sef">
+        <columns>sef</columns>
+        <underlying-index>idx_sef</underlying-index>
+      </key>
+      <key id="480" parent="43" name="PRIMARY">
+        <columns>lang_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="481" parent="44" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="482" parent="44" name="name">
+        <data-type>varchar(20)</data-type>
+        <default-expression>&apos;FUCK&apos;</default-expression>
+      </column>
+      <column id="483" parent="44" name="url">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="484" parent="44" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="485" parent="45" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="486" parent="45" name="menutype">
+        <comment>The type of menu this item belongs to. FK to #__menu_types.menutype</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(24)</data-type>
+      </column>
+      <column id="487" parent="45" name="title">
+        <comment>The display title of the menu item.</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="488" parent="45" name="alias">
+        <comment>The SEF alias of the menu item.</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="489" parent="45" name="note">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="490" parent="45" name="path">
+        <comment>The computed path of the menu item based on the alias field.</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1024)</data-type>
+      </column>
+      <column id="491" parent="45" name="link">
+        <comment>The actually link the menu item refers to.</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1024)</data-type>
+      </column>
+      <column id="492" parent="45" name="type">
+        <comment>The type of link: Component, URL, Alias, Separator</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(16)</data-type>
+      </column>
+      <column id="493" parent="45" name="published">
+        <comment>The published state of the menu link.</comment>
+        <mandatory>1</mandatory>
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="494" parent="45" name="parent_id">
+        <comment>The parent menu item in the menu tree.</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="495" parent="45" name="level">
+        <comment>The relative level in the tree.</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="496" parent="45" name="component_id">
+        <comment>FK to #__extensions.id</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="497" parent="45" name="checked_out">
+        <comment>FK to #__users.id</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="498" parent="45" name="checked_out_time">
+        <comment>The time the menu item was checked out.</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="499" parent="45" name="browserNav">
+        <comment>The click behaviour of the link.</comment>
+        <mandatory>1</mandatory>
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="500" parent="45" name="access">
+        <comment>The access level required to view the menu item.</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="501" parent="45" name="img">
+        <comment>The image of the menu item.</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="502" parent="45" name="template_style_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="503" parent="45" name="params">
+        <comment>JSON encoded data for the menu item.</comment>
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="504" parent="45" name="lft">
+        <comment>Nested set lft.</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="505" parent="45" name="rgt">
+        <comment>Nested set rgt.</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="506" parent="45" name="home">
+        <comment>Indicates if this menu item is the home or default page.</comment>
+        <mandatory>1</mandatory>
+        <data-type>tinyint(3) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="507" parent="45" name="language">
+        <mandatory>1</mandatory>
+        <data-type>char(7)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="508" parent="45" name="client_id">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <index id="509" parent="45" name="idx_client_id_parent_id_alias_language">
+        <columns>client_id
+parent_id
+alias
+language</columns>
+        <unique>1</unique>
+      </index>
+      <key id="510" parent="45" name="idx_client_id_parent_id_alias_language">
+        <columns>client_id
+parent_id
+alias
+language</columns>
+        <underlying-index>idx_client_id_parent_id_alias_language</underlying-index>
+      </key>
+      <key id="511" parent="45" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="512" parent="46" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="513" parent="46" name="menutype">
+        <mandatory>1</mandatory>
+        <data-type>varchar(24)</data-type>
+      </column>
+      <column id="514" parent="46" name="title">
+        <mandatory>1</mandatory>
+        <data-type>varchar(48)</data-type>
+      </column>
+      <column id="515" parent="46" name="description">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <index id="516" parent="46" name="idx_menutype">
+        <columns>menutype</columns>
+        <unique>1</unique>
+      </index>
+      <key id="517" parent="46" name="idx_menutype">
+        <columns>menutype</columns>
+        <underlying-index>idx_menutype</underlying-index>
+      </key>
+      <key id="518" parent="46" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="519" parent="47" name="message_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="520" parent="47" name="user_id_from">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="521" parent="47" name="user_id_to">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="522" parent="47" name="folder_id">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(3) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="523" parent="47" name="date_time">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="524" parent="47" name="state">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="525" parent="47" name="priority">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="526" parent="47" name="subject">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="527" parent="47" name="message">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <key id="528" parent="47" name="PRIMARY">
+        <columns>message_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="529" parent="48" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="530" parent="48" name="cfg_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="531" parent="48" name="cfg_value">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <index id="532" parent="48" name="idx_user_var_name">
+        <columns>user_id
+cfg_name</columns>
+        <unique>1</unique>
+      </index>
+      <key id="533" parent="48" name="idx_user_var_name">
+        <columns>user_id
+cfg_name</columns>
+        <underlying-index>idx_user_var_name</underlying-index>
+      </key>
+      <column id="534" parent="49" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="535" parent="49" name="asset_id">
+        <comment>FK to the #__assets table.</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="536" parent="49" name="title">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="537" parent="49" name="note">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="538" parent="49" name="content">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="539" parent="49" name="ordering">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="540" parent="49" name="position">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="541" parent="49" name="checked_out">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="542" parent="49" name="checked_out_time">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="543" parent="49" name="publish_up">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="544" parent="49" name="publish_down">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="545" parent="49" name="published">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="546" parent="49" name="module">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="547" parent="49" name="access">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="548" parent="49" name="showtitle">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(3) unsigned</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="549" parent="49" name="params">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="550" parent="49" name="client_id">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="551" parent="49" name="language">
+        <mandatory>1</mandatory>
+        <data-type>char(7)</data-type>
+      </column>
+      <key id="552" parent="49" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="553" parent="50" name="moduleid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="554" parent="50" name="menuid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <key id="555" parent="50" name="PRIMARY">
+        <columns>moduleid
+menuid</columns>
+        <primary>1</primary>
+      </key>
+      <column id="556" parent="51" name="catid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="557" parent="51" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="558" parent="51" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="559" parent="51" name="alias">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="560" parent="51" name="link">
+        <mandatory>1</mandatory>
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="561" parent="51" name="published">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="562" parent="51" name="numarticles">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="563" parent="51" name="cache_time">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;3600&apos;</default-expression>
+      </column>
+      <column id="564" parent="51" name="checked_out">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="565" parent="51" name="checked_out_time">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="566" parent="51" name="ordering">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="567" parent="51" name="rtl">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="568" parent="51" name="access">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="569" parent="51" name="language">
+        <mandatory>1</mandatory>
+        <data-type>char(7)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="570" parent="51" name="params">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="571" parent="51" name="created">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="572" parent="51" name="created_by">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="573" parent="51" name="created_by_alias">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="574" parent="51" name="modified">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="575" parent="51" name="modified_by">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="576" parent="51" name="metakey">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="577" parent="51" name="metadesc">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="578" parent="51" name="metadata">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="579" parent="51" name="xreference">
+        <comment>A reference to enable linkages to external data sets.</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="580" parent="51" name="publish_up">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="581" parent="51" name="publish_down">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="582" parent="51" name="description">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="583" parent="51" name="version">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="584" parent="51" name="hits">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="585" parent="51" name="images">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <key id="586" parent="51" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="587" parent="52" name="id">
+        <comment>Primary Key</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(10)</data-type>
+      </column>
+      <column id="588" parent="52" name="constant">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="589" parent="52" name="string">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="590" parent="52" name="file">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="591" parent="52" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="592" parent="53" name="postinstall_message_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20) unsigned</data-type>
+      </column>
+      <column id="593" parent="53" name="extension_id">
+        <comment>FK to #__extensions</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;700&apos;</default-expression>
+      </column>
+      <column id="594" parent="53" name="title_key">
+        <comment>Lang key for the title</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="595" parent="53" name="description_key">
+        <comment>Lang key for description</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="596" parent="53" name="action_key">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="597" parent="53" name="language_extension">
+        <comment>Extension holding lang keys</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;com_postinstall&apos;</default-expression>
+      </column>
+      <column id="598" parent="53" name="language_client_id">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(3)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="599" parent="53" name="type">
+        <comment>Message type - message, link, action</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(10)</data-type>
+        <default-expression>&apos;link&apos;</default-expression>
+      </column>
+      <column id="600" parent="53" name="action_file">
+        <comment>RAD URI to the PHP file containing action method</comment>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="601" parent="53" name="action">
+        <comment>Action method name or URL</comment>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="602" parent="53" name="condition_file">
+        <comment>RAD URI to file holding display condition method</comment>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="603" parent="53" name="condition_method">
+        <comment>Display condition method, must return boolean</comment>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="604" parent="53" name="version_introduced">
+        <comment>Version when this message was introduced</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+        <default-expression>&apos;3.2.0&apos;</default-expression>
+      </column>
+      <column id="605" parent="53" name="enabled">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(3)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <key id="606" parent="53" name="PRIMARY">
+        <columns>postinstall_message_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="607" parent="54" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="608" parent="54" name="old_url">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="609" parent="54" name="new_url">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="610" parent="54" name="referer">
+        <mandatory>1</mandatory>
+        <data-type>varchar(150)</data-type>
+      </column>
+      <column id="611" parent="54" name="comment">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="612" parent="54" name="hits">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="613" parent="54" name="published">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(4)</data-type>
+      </column>
+      <column id="614" parent="54" name="created_date">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="615" parent="54" name="modified_date">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="616" parent="54" name="header">
+        <mandatory>1</mandatory>
+        <data-type>smallint(3)</data-type>
+        <default-expression>&apos;301&apos;</default-expression>
+      </column>
+      <index id="617" parent="54" name="idx_link_old">
+        <columns>old_url</columns>
+        <unique>1</unique>
+      </index>
+      <key id="618" parent="54" name="idx_link_old">
+        <columns>old_url</columns>
+        <underlying-index>idx_link_old</underlying-index>
+      </key>
+      <key id="619" parent="54" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="620" parent="55" name="extension_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="621" parent="55" name="version_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <key id="622" parent="55" name="PRIMARY">
+        <columns>extension_id
+version_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="623" parent="56" name="session_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="624" parent="56" name="client_id">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(3) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="625" parent="56" name="guest">
+        <data-type>tinyint(4) unsigned</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="626" parent="56" name="time">
+        <data-type>varchar(14)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="627" parent="56" name="data">
+        <data-type>mediumtext</data-type>
+      </column>
+      <column id="628" parent="56" name="userid">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="629" parent="56" name="username">
+        <data-type>varchar(150)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <key id="630" parent="56" name="PRIMARY">
+        <columns>session_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="631" parent="57" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="632" parent="57" name="parent_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="633" parent="57" name="lft">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="634" parent="57" name="rgt">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="635" parent="57" name="level">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="636" parent="57" name="path">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="637" parent="57" name="title">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="638" parent="57" name="alias">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="639" parent="57" name="note">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="640" parent="57" name="description">
+        <mandatory>1</mandatory>
+        <data-type>mediumtext</data-type>
+      </column>
+      <column id="641" parent="57" name="published">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="642" parent="57" name="checked_out">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="643" parent="57" name="checked_out_time">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="644" parent="57" name="access">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="645" parent="57" name="params">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="646" parent="57" name="metadesc">
+        <comment>The meta description for the page.</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1024)</data-type>
+      </column>
+      <column id="647" parent="57" name="metakey">
+        <comment>The meta keywords for the page.</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1024)</data-type>
+      </column>
+      <column id="648" parent="57" name="metadata">
+        <comment>JSON encoded metadata properties.</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(2048)</data-type>
+      </column>
+      <column id="649" parent="57" name="created_user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="650" parent="57" name="created_time">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="651" parent="57" name="created_by_alias">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="652" parent="57" name="modified_user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="653" parent="57" name="modified_time">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="654" parent="57" name="images">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="655" parent="57" name="urls">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="656" parent="57" name="hits">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="657" parent="57" name="language">
+        <mandatory>1</mandatory>
+        <data-type>char(7)</data-type>
+      </column>
+      <column id="658" parent="57" name="version">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="659" parent="57" name="publish_up">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="660" parent="57" name="publish_down">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <key id="661" parent="57" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="662" parent="58" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="663" parent="58" name="template">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="664" parent="58" name="client_id">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="665" parent="58" name="home">
+        <mandatory>1</mandatory>
+        <data-type>char(7)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="666" parent="58" name="title">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="667" parent="58" name="params">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <key id="668" parent="58" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="669" parent="59" name="ucm_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="670" parent="59" name="ucm_item_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10)</data-type>
+      </column>
+      <column id="671" parent="59" name="ucm_type_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="672" parent="59" name="ucm_language_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="673" parent="59" name="PRIMARY">
+        <columns>ucm_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="674" parent="60" name="core_content_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="675" parent="60" name="core_type_alias">
+        <comment>FK to the content types table</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="676" parent="60" name="core_title">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="677" parent="60" name="core_alias">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="678" parent="60" name="core_body">
+        <mandatory>1</mandatory>
+        <data-type>mediumtext</data-type>
+      </column>
+      <column id="679" parent="60" name="core_state">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="680" parent="60" name="core_checked_out_time">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="681" parent="60" name="core_checked_out_user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="682" parent="60" name="core_access">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="683" parent="60" name="core_params">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="684" parent="60" name="core_featured">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(4) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="685" parent="60" name="core_metadata">
+        <comment>JSON encoded metadata properties.</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(2048)</data-type>
+      </column>
+      <column id="686" parent="60" name="core_created_user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="687" parent="60" name="core_created_by_alias">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="688" parent="60" name="core_created_time">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="689" parent="60" name="core_modified_user_id">
+        <comment>Most recent user that modified</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="690" parent="60" name="core_modified_time">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="691" parent="60" name="core_language">
+        <mandatory>1</mandatory>
+        <data-type>char(7)</data-type>
+      </column>
+      <column id="692" parent="60" name="core_publish_up">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="693" parent="60" name="core_publish_down">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="694" parent="60" name="core_content_item_id">
+        <comment>ID from the individual type table</comment>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="695" parent="60" name="asset_id">
+        <comment>FK to the #__assets table.</comment>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="696" parent="60" name="core_images">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="697" parent="60" name="core_urls">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="698" parent="60" name="core_hits">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="699" parent="60" name="core_version">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="700" parent="60" name="core_ordering">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="701" parent="60" name="core_metakey">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="702" parent="60" name="core_metadesc">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="703" parent="60" name="core_catid">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="704" parent="60" name="core_xreference">
+        <comment>A reference to enable linkages to external data sets.</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="705" parent="60" name="core_type_id">
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <key id="706" parent="60" name="PRIMARY">
+        <columns>core_content_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="707" parent="61" name="version_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="708" parent="61" name="ucm_item_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="709" parent="61" name="ucm_type_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="710" parent="61" name="version_note">
+        <comment>Optional version name</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="711" parent="61" name="save_date">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="712" parent="61" name="editor_user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="713" parent="61" name="character_count">
+        <comment>Number of characters in this version.</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="714" parent="61" name="sha1_hash">
+        <comment>SHA1 hash of the version_data column.</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="715" parent="61" name="version_data">
+        <comment>json-encoded string of version data</comment>
+        <mandatory>1</mandatory>
+        <data-type>mediumtext</data-type>
+      </column>
+      <column id="716" parent="61" name="keep_forever">
+        <comment>0=auto delete; 1=keep</comment>
+        <mandatory>1</mandatory>
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <key id="717" parent="61" name="PRIMARY">
+        <columns>version_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="718" parent="62" name="update_site_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="719" parent="62" name="name">
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="720" parent="62" name="type">
+        <data-type>varchar(20)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="721" parent="62" name="location">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="722" parent="62" name="enabled">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="723" parent="62" name="last_check_timestamp">
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="724" parent="62" name="extra_query">
+        <data-type>varchar(1000)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <key id="725" parent="62" name="PRIMARY">
+        <columns>update_site_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="726" parent="63" name="update_site_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="727" parent="63" name="extension_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <key id="728" parent="63" name="PRIMARY">
+        <columns>update_site_id
+extension_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="729" parent="64" name="update_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="730" parent="64" name="update_site_id">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="731" parent="64" name="extension_id">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="732" parent="64" name="name">
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="733" parent="64" name="description">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="734" parent="64" name="element">
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="735" parent="64" name="type">
+        <data-type>varchar(20)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="736" parent="64" name="folder">
+        <data-type>varchar(20)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="737" parent="64" name="client_id">
+        <data-type>tinyint(3)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="738" parent="64" name="version">
+        <data-type>varchar(32)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="739" parent="64" name="data">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="740" parent="64" name="detailsurl">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="741" parent="64" name="infourl">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="742" parent="64" name="extra_query">
+        <data-type>varchar(1000)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <key id="743" parent="64" name="PRIMARY">
+        <columns>update_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="744" parent="65" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="745" parent="65" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="746" parent="65" name="token">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="747" parent="65" name="series">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="748" parent="65" name="invalid">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(4)</data-type>
+      </column>
+      <column id="749" parent="65" name="time">
+        <mandatory>1</mandatory>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="750" parent="65" name="uastring">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <index id="751" parent="65" name="series">
+        <columns>series</columns>
+        <unique>1</unique>
+      </index>
+      <index id="752" parent="65" name="series_2">
+        <columns>series</columns>
+        <unique>1</unique>
+      </index>
+      <index id="753" parent="65" name="series_3">
+        <columns>series</columns>
+        <unique>1</unique>
+      </index>
+      <key id="754" parent="65" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <key id="755" parent="65" name="series">
+        <columns>series</columns>
+        <underlying-index>series</underlying-index>
+      </key>
+      <key id="756" parent="65" name="series_2">
+        <columns>series</columns>
+        <underlying-index>series_2</underlying-index>
+      </key>
+      <key id="757" parent="65" name="series_3">
+        <columns>series</columns>
+        <underlying-index>series_3</underlying-index>
+      </key>
+      <column id="758" parent="66" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="759" parent="66" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="760" parent="66" name="catid">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="761" parent="66" name="subject">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="762" parent="66" name="body">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="763" parent="66" name="state">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(3)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="764" parent="66" name="checked_out">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="765" parent="66" name="checked_out_time">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="766" parent="66" name="created_user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="767" parent="66" name="created_time">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="768" parent="66" name="modified_user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="769" parent="66" name="modified_time">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="770" parent="66" name="review_time">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="771" parent="66" name="publish_up">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="772" parent="66" name="publish_down">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <key id="773" parent="66" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="774" parent="67" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="775" parent="67" name="profile_key">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="776" parent="67" name="profile_value">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="777" parent="67" name="ordering">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <index id="778" parent="67" name="idx_user_id_profile_key">
+        <columns>user_id
+profile_key</columns>
+        <unique>1</unique>
+      </index>
+      <key id="779" parent="67" name="idx_user_id_profile_key">
+        <columns>user_id
+profile_key</columns>
+        <underlying-index>idx_user_id_profile_key</underlying-index>
+      </key>
+      <column id="780" parent="68" name="user_id">
+        <comment>Foreign Key to #__users.id</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="781" parent="68" name="group_id">
+        <comment>Foreign Key to #__usergroups.id</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <key id="782" parent="68" name="PRIMARY">
+        <columns>user_id
+group_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="783" parent="69" name="id">
+        <comment>Primary Key</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="784" parent="69" name="parent_id">
+        <comment>Adjacency List Reference Id</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="785" parent="69" name="lft">
+        <comment>Nested set lft.</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="786" parent="69" name="rgt">
+        <comment>Nested set rgt.</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="787" parent="69" name="title">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <index id="788" parent="69" name="idx_usergroup_parent_title_lookup">
+        <columns>parent_id
+title</columns>
+        <unique>1</unique>
+      </index>
+      <key id="789" parent="69" name="idx_usergroup_parent_title_lookup">
+        <columns>parent_id
+title</columns>
+        <underlying-index>idx_usergroup_parent_title_lookup</underlying-index>
+      </key>
+      <key id="790" parent="69" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="791" parent="70" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="792" parent="70" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="793" parent="70" name="username">
+        <mandatory>1</mandatory>
+        <data-type>varchar(150)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="794" parent="70" name="email">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="795" parent="70" name="password">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="796" parent="70" name="block">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="797" parent="70" name="sendEmail">
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="798" parent="70" name="registerDate">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="799" parent="70" name="lastvisitDate">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="800" parent="70" name="activation">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="801" parent="70" name="params">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="802" parent="70" name="lastResetTime">
+        <comment>Date of last password reset</comment>
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="803" parent="70" name="resetCount">
+        <comment>Count of password resets since lastResetTime</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="804" parent="70" name="otpKey">
+        <comment>Two factor authentication encrypted keys</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1000)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="805" parent="70" name="otep">
+        <comment>One time emergency passwords</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1000)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="806" parent="70" name="requireReset">
+        <comment>Require user to reset password on next login</comment>
+        <mandatory>1</mandatory>
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <key id="807" parent="70" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="808" parent="71" name="id">
+        <comment>Primary Key</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="809" parent="71" name="title">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="810" parent="71" name="ordering">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="811" parent="71" name="rules">
+        <comment>JSON encoded access control.</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(5120)</data-type>
+      </column>
+      <index id="812" parent="71" name="idx_assetgroup_title_lookup">
+        <columns>title</columns>
+        <unique>1</unique>
+      </index>
+      <key id="813" parent="71" name="idx_assetgroup_title_lookup">
+        <columns>title</columns>
+        <underlying-index>idx_assetgroup_title_lookup</underlying-index>
+      </key>
+      <key id="814" parent="71" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="815" parent="72" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="816" parent="72" name="name">
+        <data-type>varchar(25)</data-type>
+      </column>
+      <column id="817" parent="72" name="path">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="818" parent="72" name="published">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <key id="819" parent="72" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="820" parent="73" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="821" parent="73" name="name">
+        <data-type>varchar(20)</data-type>
+        <default-expression>&apos;FUCK&apos;</default-expression>
+      </column>
+      <column id="822" parent="73" name="url">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="823" parent="73" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>

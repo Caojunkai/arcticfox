@@ -1,0 +1,185 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Panel
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@panel-title-margin-bottom:                     @global-margin;
+@panel-title-font-size:                         round((@global-font-size * 1.125)); // 18px
+@panel-title-line-height:                       round((@panel-title-font-size * 1.32)); // 24px
+@panel-title-font-weight:                       @global-heading-font-weight;
+@panel-title-color:                             @global-heading-color;
+@panel-title-text-transform:                    uppercase;
+
+@panel-box-padding:                             30px;
+@panel-box-background:                          #fafafa;
+@panel-box-color:                               @global-color;
+@panel-box-title-color:                         @global-heading-color;
+
+@panel-box-primary-background:                  #fafafa;
+@panel-box-primary-color:                       @global-color;
+@panel-box-primary-title-color:                 @global-heading-color;
+
+@panel-box-secondary-background:                rgba(0,0,0,0);
+@panel-box-secondary-color:                     @global-color;
+@panel-box-secondary-title-color:               @global-heading-color;
+
+@panel-hover-padding:                           @global-margin;
+@panel-hover-color:                             @global-color;
+@panel-hover-hover-color:                       @global-color;
+@panel-box-primary-title-color:                 @global-heading-color;
+
+@panel-header-title-padding:                    @global-margin;
+@panel-header-title-border:                     rgba(0,0,0,0);
+@panel-header-title-color:                      @global-color;
+
+@panel-divider-gutter:                          @global-grid-gutter;
+@panel-divider-gutter-large:                    @global-grid-gutter-large;
+@panel-divider-border:                          @global-border;
+
+//
+// New
+//
+
+@panel-box-image:                               url('@{global-image-path}/@{global-style}/panel_box_bg.jpg');
+@panel-box-padding-large:                       @global-margin-large;
+@panel-box-primary-border:                      @global-primary-background;
+@panel-box-secondary-border:                    @global-alt-border;
+
+@panel-header-icon-width:                       150px;
+@panel-header-icon-font-size:                   13px;
+@panel-header-icon:                             "\e600";
+@panel-header-icon-color:                       rgba(185,184,184, 0.5);
+
+// Sub-object: `uk-panel-title`
+// ========================================================================
+
+.hook-panel-title() {}
+
+
+// Sub-object: `uk-panel-badge`
+// ========================================================================
+
+.hook-panel-badge() {}
+
+
+// Modifier: `uk-panel-box`
+// ========================================================================
+
+.hook-panel-box() {
+
+    background-color: @panel-box-background;
+    background-image: @panel-box-image;
+    background-position: 0 0;
+    background-repeat: repeat;
+
+    /* Large screen and bigger */
+    @media (min-width: @breakpoint-xlarge) {
+
+        padding: @panel-box-padding-large;
+
+        div.uk-panel-teaser {
+            margin-top: -@panel-box-padding-large;
+            margin-left: -@panel-box-padding-large;
+            margin-right: -@panel-box-padding-large;
+        }
+
+    }
+
+}
+
+.hook-panel-box-hover() {}
+
+//
+// Sub-modifier: `uk-panel-box-primary`
+//
+
+.hook-panel-box-primary() {
+
+    border-bottom: @global-border-bold-width solid @panel-box-primary-border;
+
+}
+
+.hook-panel-box-primary-hover() {}
+
+//
+// Sub-modifier: `uk-panel-box-secondary`
+//
+
+.hook-panel-box-secondary() {
+
+    border: @global-border-width solid @panel-box-secondary-border;
+    background-image: none;
+
+}
+
+.hook-panel-box-secondary-hover() {}
+
+
+// Modifier: `uk-panel-hover`
+// ========================================================================
+
+.hook-panel-hover() {
+
+    /* Large screen and bigger */
+    @media (min-width: @breakpoint-xlarge) {
+
+        padding: @panel-box-padding-large;
+
+        div.uk-panel-teaser {
+            margin-top: -@panel-box-padding-large;
+            margin-left: -@panel-box-padding-large;
+            margin-right: -@panel-box-padding-large;
+        }
+
+    }
+
+}
+
+.hook-panel-hover-hover() {}
+
+
+// Modifier: `uk-panel-header`
+// ========================================================================
+
+.hook-panel-header() {
+
+    position: relative;
+    text-align: center;
+
+    &:before {
+        position: absolute;
+        content: @panel-header-icon;
+        bottom: -(@panel-header-icon-font-size / 2);
+        left: 50%;
+        width: @panel-header-icon-width;
+        margin-left: -(@panel-header-icon-width / 2);
+        color: @panel-header-icon-color;
+
+        font-family: 'lykka';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        font-size: @panel-header-icon-font-size;
+        text-transform: none;
+        line-height: 1;
+
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+    }
+
+}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-panel-misc() {}

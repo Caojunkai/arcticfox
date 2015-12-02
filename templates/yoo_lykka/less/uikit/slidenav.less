@@ -1,0 +1,95 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Slidenav
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@slidenav-width:                    40px;
+@slidenav-font-size:                40px;
+
+
+// Component
+// ========================================================================
+
+.hook-slidenav() {
+
+    position: relative;
+
+
+    // OnClick Effect
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -30px 0 0 -30px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        opacity: 0;
+        background: fade(@slidenav-color, 5%);
+    }
+
+}
+
+.hook-slidenav-hover() {}
+
+.hook-slidenav-active() {
+
+    &:after {
+        -webkit-animation: anim-effect-lykka-slidenav 1s ease-out forwards;
+        animation: anim-effect-lykka-slidenav 1s ease-out forwards;
+    }
+
+    @-webkit-keyframes anim-effect-lykka-slidenav {
+        0% {
+            opacity: 1;
+            -webkit-transform: scale3d(0.5, 0.5, 1);
+        }
+        25% {
+            opacity: 0.5;
+            -webkit-transform: scale3d(1, 1, 1);
+        }
+        100% {
+            opacity: 0;
+            -webkit-transform: scale3d(1, 1, 1);
+        }
+    }
+
+    @keyframes anim-effect-lykka-slidenav {
+        0% {
+            opacity: 1;
+            transform: scale3d(0.5, 0.5, 1);
+        }
+        25% {
+            opacity: 0.5;
+            transform: scale3d(1, 1, 1);
+        }
+        100% {
+            opacity: 0;
+            transform: scale3d(1, 1, 1);
+        }
+    }
+
+}
+
+.hook-slidenav-contrast() {
+
+    &:after { background-color: fade(@slidenav-contrast-color, 5%); }
+
+}
+
+.hook-slidenav-contrast-hover() {}
+
+.hook-slidenav-contrast-active() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-slidenav-misc() {}

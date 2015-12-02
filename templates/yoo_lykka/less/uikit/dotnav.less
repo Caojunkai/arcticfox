@@ -1,0 +1,100 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Dotnav
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@dotnav-width:                                  14px;
+@dotnav-background:                             rgba(0,0,0,0);
+@dotnav-hover-background:                       rgba(0,0,0,0);
+@dotnav-onclick-background:                     @global-alt-border;
+@dotnav-active-background:                      rgba(0,0,0,0);
+
+@dotnav-contrast-background:                    rgba(0,0,0,0);
+@dotnav-contrast-hover-background:              rgba(0,0,0,0);
+@dotnav-contrast-onclick-background:            @global-contrast-color;
+@dotnav-contrast-active-background:             rgba(0,0,0,0);
+
+//
+// New
+//
+
+@dotnav-border-width:                           2px;
+@dotnav-border:                                 @global-border;
+@dotnav-hover-border:                           @global-alt-border;
+@dotnav-onclick-border:                         @global-alt-border;
+@dotnav-active-border:                          @global-alt-border;
+
+@dotnav-contrast-border:                        fade(@global-contrast-color, 30%);
+@dotnav-contrast-hover-border:                  @global-contrast-color;
+@dotnav-contrast-onclick-border:                @global-contrast-color;
+@dotnav-contrast-active-border:                 @global-contrast-color;
+
+// Component
+// ========================================================================
+
+.hook-dotnav-item() {
+    position: relative;
+    border: @dotnav-border-width solid @dotnav-border;
+    -webkit-transition: border-color 0.15s ease, background 0.3s ease;
+    transition: border-color 0.15s ease, background 0.3s ease;
+
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 0;
+        width: 100%;
+        background-color: @dotnav-hover-border;
+        -webkit-transition: height 0.15s ease;
+        transition: height 0.15s ease;
+    }
+
+}
+
+.hook-dotnav-item-hover() { border-color: @dotnav-hover-border; }
+
+.hook-dotnav-item-onclick()  {
+
+    border-color: @dotnav-onclick-border;
+    &:before { height: 100%; }
+
+}
+
+.hook-dotnav-item-active()  {
+
+    border-color: @dotnav-active-border;
+
+    &:active { background-color: @dotnav-onclick-background; }
+
+}
+
+.hook-dotnav-contrast-item() {
+
+    border-color: @dotnav-contrast-border;
+    &:before { background-color: @dotnav-contrast-hover-border; }
+
+}
+
+.hook-dotnav-contrast-item-hover() { border-color: @dotnav-contrast-hover-border; }
+
+.hook-dotnav-contrast-item-onclick() { border-color: @dotnav-contrast-onclick-border; }
+
+.hook-dotnav-contrast-item-active() {
+
+    border-color: @dotnav-contrast-active-border;
+    &:active { background-color: @dotnav-contrast-onclick-background; }
+
+}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-dotnav-misc() {}

@@ -1,0 +1,97 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Pagination
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@pagination-line-height:                        @global-line-height;
+@pagination-background:                         rgba(0,0,0,0);
+@pagination-color:                              @global-muted-color;
+@pagination-hover-background:                   rgba(0,0,0,0);
+@pagination-hover-color:                        @global-color;
+@pagination-onclick-background:                 rgba(0,0,0,0);
+@pagination-onclick-color:                      @global-heading-color;
+
+@pagination-active-background:                  rgba(0,0,0,0);
+@pagination-active-color:                       @global-heading-color;
+
+@pagination-disabled-background:                rgba(0,0,0,0);
+@pagination-disabled-color:                     @global-muted-color;
+
+//
+// New
+//
+
+@pagination-border-width:                       @global-border-width;
+@pagination-border:                             @global-border;
+@pagination-hover-border:                       @global-alt-border;
+@pagination-active-border-bottom-width:         @global-border-bold-width;
+@pagination-active-border:                      @global-alt-border;
+
+
+// Component
+// ========================================================================
+
+//
+// Items
+//
+
+.hook-pagination-item() {}
+
+// Link
+.hook-pagination-link() {
+
+    position: relative;
+    overflow: hidden;
+
+    -webkit-transition: border 0.3s, background 0.3s, color 0.3s ease-in-out;
+    transition: border 0.3s, background 0.3s, color 0.3s ease-in-out;
+
+    border: @pagination-border-width solid @pagination-border;
+
+    &:not(:disabled):before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: @pagination-active-border;
+        -webkit-transition: height 0.1s;
+        transition: height 0.1s;
+        z-index: -1;
+
+        // Chrome flicker hack
+        -webkit-backface-visibility: hidden;
+    }
+
+}
+
+.hook-pagination-link-hover() { border-color: @pagination-hover-border; }
+
+.hook-pagination-link-active() {
+
+    &:before { height: @pagination-active-border-bottom-width; }
+
+}
+
+// Active
+.hook-pagination-active() { border: @pagination-border-width solid @pagination-active-border; }
+
+// Disabled
+.hook-pagination-disabled() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-pagination-misc() {
+
+    .uk-pagination > li { line-height: 0; }
+
+}

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>mod_banner</name>
+	<author>juren</author>
+	<creationDate>July 2015</creationDate>
+	<copyright>Copyright (C) 2005 - 2015 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>admin@joomla.org</authorEmail>
+	<authorUrl>www.joomla.org</authorUrl>
+	<version>3.0.0</version>
+	<description>MOD_BANNER_XML_DESCRIPTION</description>
+	<media folder="media" destination="mod_bannder">
+		<folder>image</folder>
+		<folder>js</folder>
+	</media>
+	
+
+	<files>
+		<filename module="mod_banner">mod_banner.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>mod_banner.xml</filename>
+	</files>
+	<languages>
+		<language tag="zh-CN">language/zh-CN/zh-CN.mod_banner.ini</language>
+		<language tag="zh-CN">language/zh-CN/zh-CN.mod_banner.sys.ini</language>
+
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_SEARCH" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="width"
+					type="text"
+					label="MOD_BANNER_FIELD_WIDTH_DESC"
+					description="MOD_BANNER_FIELD_SHOWTYPE_DESC" />
+				<field
+					name="height"
+					type="text"
+					label="MOD_BANNER_FIELD_HEIGHT_LABEL"
+					description="MOD_BANNER_FIELD_ACTIVE_DESC"
+					>
+					
+				</field>
+				
+				<field
+					name="time"
+					type="text"
+					label="MOD_BANNER_FIELD_TIME_LABEL"
+					description="MOD_BANNER_CAROUSEL_TIME_DESC" />		
+				<field
+					name="auto"
+					type="list"
+					label="MOD_BANNER_AUTO_LABEL"
+					description="MOD_BANNER_AUTO_DESC" >
+					 <option value="false">false</option>
+  					 <option value="true">true</option>
+  				</field>		
+			</fieldset>
+			<fieldset
+				name="IMAGE_1_SETTINGS">
+				<field
+					name="image_1"
+					type="media"
+					
+					label="MOD_BANNER_IMAGE_URL_LABEL"
+					description="MOD_BANNER_IMAGE_URL" />
+				<field
+					name="direct_1"
+					type="menuitem"
+					label="MOD_BANNER_DIRECT_TO_LABEL"
+					description="MOD_BANNER_DIRECT_TO" />
+
+			</fieldset>
+			<fieldset
+				name="IMAGE_2_SETTINGS">
+				<field
+					name="image_2"
+					type="media"
+					
+					label="MOD_BANNER_IMAGE_URL_LABEL"
+					description="MOD_BANNER_IMAGE_URL" />
+				<field
+					name="direct_2"
+					type="menuitem"
+					label="MOD_BANNER_DIRECT_TO_LABEL"
+					description="MOD_BANNER_DIRECT_TO" />
+
+			</fieldset>
+			<fieldset
+				name="IMAGE_3_SETTINGS">
+				<field
+					name="image_3"
+					type="media"
+					
+					label="MOD_BANNER_IMAGE_URL_LABEL"
+					description="MOD_BANNER_IMAGE_URL" />
+				<field
+					name="direct_3"
+					type="menuitem"
+					label="MOD_BANNER_DIRECT_TO_LABEL"
+					description="MOD_BANNER_DIRECT_TO" />
+
+			</fieldset>
+			<fieldset
+				name="IMAGE_4_SETTINGS">
+				<field
+					name="image_4"
+					type="media"
+					
+					label="MOD_BANNER_IMAGE_URL_LABEL"
+					description="MOD_BANNER_IMAGE_URL" />
+				<field
+					name="direct_4"
+					type="menuitem"
+					label="MOD_BANNER_DIRECT_TO_LABEL"
+					description="MOD_BANNER_DIRECT_TO" />
+
+			</fieldset>
+			<fieldset
+				name="IMAGE_5_SETTINGS">
+				<field
+					name="image_5"
+					type="media"
+					
+					label="MOD_BANNER_IMAGE_URL_LABEL"
+					description="MOD_BANNER_IMAGE_URL" />
+				<field
+					name="direct_5"
+					type="menuitem"
+					label="MOD_BANNER_DIRECT_TO_LABEL"
+					description="MOD_BANNER_DIRECT_TO" />
+
+			</fieldset>
+			<fieldset
+				name="IMAGE_6_SETTINGS">
+				<field
+					name="image_6"
+					type="media"
+					
+					label="MOD_BANNER_IMAGE_URL_LABEL"
+					description="MOD_BANNER_IMAGE_URL" />
+				<field
+					name="direct_6"
+					type="menuitem"
+					label="MOD_BANNER_DIRECT_TO_LABEL"
+					description="MOD_BANNER_DIRECT_TO" />
+
+			</fieldset>
+			<fieldset
+				name="IMAGE_7_SETTINGS">
+				<field
+					name="image_7"
+					type="media"
+					
+					label="MOD_BANNER_IMAGE_URL_LABEL"
+					description="MOD_BANNER_IMAGE_URL" />
+				<field
+					name="direct_7"
+					type="menuitem"
+					label="MOD_BANNER_DIRECT_TO_LABEL"
+					description="MOD_BANNER_DIRECT_TO" />
+
+			</fieldset>
+			<fieldset
+				name="IMAGE_8_SETTINGS">
+				<field
+					name="image_8"
+					type="media"
+					
+					label="MOD_BANNER_IMAGE_URL_LABEL"
+					description="MOD_BANNER_IMAGE_URL" />
+				<field
+					name="direct_8"
+					type="menuitem"
+					label="MOD_BANNER_DIRECT_TO_LABEL"
+					description="MOD_BANNER_DIRECT_TO" />
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>

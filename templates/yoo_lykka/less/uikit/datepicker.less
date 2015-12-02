@@ -1,0 +1,82 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Datepicker
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@datepicker-nav-margin-bottom:                  @global-margin;
+@datepicker-nav-color:                          @global-color;
+@datepicker-nav-hover-color:                    @global-color;
+
+@datepicker-table-color:                        @global-color;
+
+@datepicker-table-hover-background:             rgba(0,0,0,0);
+@datepicker-table-hover-color:                  @global-heading-color;
+@datepicker-table-active-background:            rgba(0,0,0,0);
+@datepicker-table-active-color:                 @global-heading-color;
+@datepicker-table-onclick-background:           rgba(0,0,0,0);
+@datepicker-table-onclick-color:                @global-heading-color;
+
+@datepicker-table-muted-color:                  @global-muted-color;
+
+//
+// New
+//
+
+@datepicker-table-border-width:                 2px;
+@datepicker-table-border:                       @global-alt-border;
+@datepicker-table-onclick-border-width:         @global-border-bold-width;
+
+
+// Component
+// ========================================================================
+
+.hook-datepicker-nav() {}
+
+.hook-datepicker-nav-item() {}
+
+.hook-datepicker-table-item() {
+
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+        width: 80%;
+        border-bottom: 0 solid @datepicker-table-border;
+        -webkit-transition: border-bottom-color 0.2s, border-bottom-width 0.2s;
+        transition: border-bottom-color 0.2s, border-bottom-width 0.2s;
+    }
+}
+
+.hook-datepicker-table-item-hover() {
+
+    &:after { border-bottom-width: @datepicker-table-border-width; }
+
+}
+
+.hook-datepicker-table-item-onclick() {
+
+    &:after { border-bottom-width: @datepicker-table-onclick-border-width; }
+
+}
+
+.hook-datepicker-table-item-active() {
+
+    &:after { border-bottom-width: @datepicker-table-border-width; }
+
+}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-datepicker-misc() {}

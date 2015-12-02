@@ -1,0 +1,148 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+/* ========================================================================
+   Name:            Bootstrap layer
+   Description:     Compatibility layer to match UIkit and Bootstrap style
+ ========================================================================== */
+
+@bs-input-height:           22px;
+
+
+/* Button overrides
+ ========================================================================== */
+
+.btn.active:before,
+.btn:active:before { height: @bs-button-height + 10px; }
+
+.btn-small.active:before,
+.btn-small:active:before { height: @bs-button-height + 6px; }
+
+/*
+ * Button Primary
+ */
+
+.btn-primary,
+.btn-info,
+.btn-inverse {
+    &:not(:disabled):before { border-color: @button-primary-border; }
+    &:not(:disabled):hover:before { border-color: @button-primary-hover-background; }
+    &:not(:disabled):active,
+    &:not(:disabled).uk-active {
+
+        background: @button-primary-hover-background;
+        &:before { border-color: @button-primary-active-background; }
+    }
+
+    &:not(:disabled):focus {
+        background: @button-primary-hover-background;
+        color: @global-contrast-color;
+        &:not(.uk-active):not(:active):before { border-color: @button-primary-hover-background; }
+    }
+
+}
+
+/*
+ * Button Success
+ */
+
+.btn-success:not(:disabled):before { border-color: @button-success-border; }
+.btn-success:not(:disabled):hover:before { border-color: @button-success-hover-background; }
+.btn-success:not(:disabled):active,
+.btn-success:not(:disabled).uk-active {
+
+    background: @button-success-hover-background;
+    &:before { border-color: @button-success-active-background; }
+}
+
+.btn-success:not(:disabled):focus {
+    background: @button-success-hover-background;
+    color: @global-contrast-color;
+    &:not(.uk-active):not(:active):before { border-color: @button-success-hover-background; }
+}
+
+/*
+ * Button Warning/Danger
+ */
+
+.btn-warning,
+.btn-danger {
+    &:not(:disabled):before { border-color: @button-danger-border; }
+    &:not(:disabled):hover:before { border-color: @button-danger-hover-background; }
+    &:not(:disabled):active,
+    &:not(:disabled).uk-active {
+
+        background: @button-danger-hover-background;
+        &:before { border-color: @button-danger-active-background; }
+    }
+
+    &:not(:disabled):focus {
+        background: @button-danger-hover-background;
+        color: @global-contrast-color;
+        &:not(.uk-active):not(:active):before { border-color: @button-danger-hover-background; }
+    }
+
+}
+
+/*
+ * Button Large
+ */
+
+.btn-large:active:not(:disabled):before,
+.btn-large.uk-active:not(:disabled):before { border-bottom-width: @button-large-height; }
+
+/*
+ * Button Link
+ */
+
+.btn-link:hover,
+.btn-link:focus { text-decoration: none; }
+.btn-link:before { border: none !important; }
+
+/*
+ * Button Disabled
+ */
+
+.btn.disabled {
+    background-color: rgba(0,0,0,0) !important;
+    color: @global-muted-color !important;
+
+    &:before { border: none !important; }
+
+}
+
+.input-prepend .add-on,
+.input-prepend .btn { margin-right: 0; }
+
+
+/* Form overrides
+ ========================================================================== */
+
+.input-append input,
+.input-prepend input,
+.input-append .add-on,
+.input-prepend .add-on {
+    border-color: @global-alt-border;
+    background: rgba(0,0,0,0);
+}
+
+.row-fluid input[class*="span"] { min-height: 32px; }
+
+
+/* Navs overrides
+ ========================================================================== */
+
+.nav-tabs.nav-stacked > li > a:hover { border-style: solid; }
+
+.nav-list .divider {
+    margin-left: -15px;
+    margin-right: -15px;
+    border-width: @nav-side-divider-border-width;
+}
+
+.nav-list > li > a,
+.nav-list .nav-header { padding: 3px 0; }
+
+.nav-tabs .dropdown .dropdown-toggle .caret {
+    border-top-color: @global-muted-color;
+    border-bottom-color: @global-muted-color;
+}

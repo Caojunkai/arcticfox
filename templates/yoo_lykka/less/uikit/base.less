@@ -1,0 +1,109 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Base
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@base-body-background:                          @global-background;
+@base-body-font-family:                         @global-body-font-family;
+@base-body-font-weight:                         @global-font-weight;
+@base-body-font-size:                           @global-font-size;
+@base-body-line-height:                         @global-line-height;
+@base-body-color:                               @global-color;
+
+@base-link-color:                               @global-link-color;
+@base-link-hover-color:                         @global-link-hover-color;
+@base-ins-color:                                @global-color;
+@base-mark-color:                               @global-color;
+
+@base-margin-vertical:                          @global-margin;
+
+@base-heading-font-family:                      @global-heading-font-family;
+@base-heading-font-weight:                      @global-heading-font-weight;
+@base-heading-color:                            @global-heading-color;
+@base-heading-text-transform:                   @global-text-transform;
+@base-heading-margin-top:                       @global-margin-large;
+@base-h1-font-size:                             round((@global-font-size * 2)); // 32
+@base-h1-line-height:                           round((@base-h1-font-size * 1.187)); // 38px
+@base-h2-font-size:                             round((@global-font-size * 1.5)); // 24px
+@base-h2-line-height:                           round((@base-h2-font-size * 1.27)); // 30px
+@base-h3-font-size:                             round((@global-font-size * 1.125)); // 18px
+@base-h3-line-height:                           round((@base-h3-font-size * 1.32)); // 24px
+@base-h4-font-size:                             @global-font-size; // 16px
+@base-h4-line-height:                           round((@base-h4-font-size * 1.36)); // 22px
+@base-h5-font-size:                             round((@global-font-size * 0.875));; // 14px
+@base-h5-line-height:                           @global-line-height; // 20px
+@base-h6-font-size:                             round((@global-font-size * 0.75)); // 12px
+@base-h6-line-height:                           round((@base-h6-font-size * 1.46)); // 18px
+
+@base-hr-border:                                @global-border;
+
+@base-blockquote-border:                        @global-border;
+@base-blockquote-font-size:                     round((@global-font-size * 1.375)); // 22px
+@base-blockquote-line-height:                   round((@base-blockquote-font-size * 1.2727)); // 28px
+
+@base-code-color:                               @global-muted-color;
+@base-code-font-size:                           round((@global-font-size * 0.875)); // 14px
+@base-em-color:                                 #df6d6d;
+
+@base-pre-color:                                @global-color;
+@base-pre-font-size:                            round((@global-font-size * 0.875)); // 14px
+@base-pre-line-height:                          round((@base-pre-font-size * 1.428)); // 20px
+
+@base-selection-background:                     fade(@global-primary-background, 70%);
+@base-selection-color:                          @global-contrast-color;
+
+//
+// New
+//
+
+@base-heading-letter-spacing:                   @global-letter-spacing;
+
+
+// Body
+// ========================================================================
+
+.hook-base-body() {}
+
+
+// Code and preformatted text
+// ========================================================================
+
+.hook-base-code() {}
+
+.hook-base-code-reset() {}
+
+.hook-base-pre() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-base-misc() {
+
+    a {
+        -webkit-transition: color 0.1s ease-in-out;
+        transition: color 0.1s ease-in-out;
+    }
+
+    a:hover { text-decoration: @global-text-decoration; }
+
+    h1,
+    .uk-h1,
+    h2,
+    .uk-h2,
+    h3,
+    .uk-h3,
+    h4,
+    .uk-h4,
+    h5,
+    .uk-h5,
+    h6,
+    .uk-h6 { letter-spacing: @base-heading-letter-spacing; }
+
+}

@@ -1,0 +1,39 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Autocomplete
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@nav-autocomplete-color:                              @global-color;
+@nav-autocomplete-active-background:                  rgba(0,0,0,0);
+@nav-autocomplete-active-color:                       @global-heading-color;
+@nav-autocomplete-header-color:                       @global-muted-color;
+@nav-autocomplete-divider-border:                     @global-border;
+@nav-autocomplete-divider-border-width:               2px;
+
+
+// Component
+// ========================================================================
+
+.hook-nav-autocomplete() {
+    box-shadow: 0 @global-border-width 0 0 @global-border;
+    -webkit-transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s;
+}
+
+.hook-nav-autocomplete-active() { box-shadow: 0 @nav-autocomplete-divider-border-width 0 0 @global-alt-border; }
+
+.hook-nav-autocomplete-header() {}
+
+.hook-nav-autocomplete-divider() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-autocomplete-misc() {}
