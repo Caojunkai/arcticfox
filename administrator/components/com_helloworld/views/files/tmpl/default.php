@@ -35,7 +35,7 @@ JHtml::_('formbehavior.chosen', 'select');
         </thead>
         <tbody>
         <?php if (!empty($this->items)) : ?>
-            <?php foreach ($this->items as $i => $row) :
+            <?php foreach ($this->items[1] as $i => $row) :
                 $link = JRoute::_('index.php?option=com_helloworld&task=helloworld.edit&id=' . $row['id']);
                 ?>
                 <tr>
@@ -54,6 +54,13 @@ JHtml::_('formbehavior.chosen', 'select');
                         <?php echo $row['fullname']; ?>
                     </td>
 
+                </tr>
+            <?php endforeach; ?>
+            <?php foreach($this->items[0] as $i => $row): ?>
+                <tr>
+                    <td>
+                        <?php echo $row ?>
+                    </td>
                 </tr>
             <?php endforeach; ?>
         <?php endif; ?>

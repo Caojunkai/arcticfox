@@ -104,10 +104,13 @@
                         if(data_g != undefined){
                             $(".add").show(100,function(){
                                 $("li").each(function(index){
-//                                    $(this).text(data.g[index].q);
-                                    $(this).text(data["g"][index]["q"]);
+                                    if(data.hasOwnProperty("g") && data[g][index].hasOwnProperty("q")){
+                                        //$(this).text(data.g[index].q);
+                                        $(this).text(data["g"][index]["q"]);
 //                                    $(this).data("data-key",data.g[index].q);
-                                    $(this).data("data-key",data["g"][index]["q"]);
+                                        $(this).data("data-key",data["g"][index]["q"]);
+                                    }
+
                                 })
                             });
                         }

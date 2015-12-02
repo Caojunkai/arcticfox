@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<text>
+    <note name="sdsa">
+        <option type="exclude">.svn</option>
+        <option type="exclude">.CVS</option>
+        <option type="include">1.xml</option>
+        <option type="include">1.ini</option>
+    </note>
+</text>

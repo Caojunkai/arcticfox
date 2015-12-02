@@ -82,7 +82,6 @@ class JLayoutFile extends JLayoutBase
 
 		// Check possible overrides, and build the full path to layout file
 		$path = $this->getPath();
-
 		if ($this->options->get('debug', false))
 		{
 			echo "<pre>" . $this->renderDebugMessages() . "</pre>";
@@ -96,7 +95,6 @@ class JLayoutFile extends JLayoutBase
 			$layoutOutput = ob_get_contents();
 			ob_end_clean();
 		}
-
 		return $layoutOutput;
 	}
 

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.7//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.7/template-install.dtd">
+<extension version="2.5" type="template" client="site" method="upgrade">
+    <name>Laratrvel</name>
+    <version>1.0.0</version>
+    <creationDate>2015-12-01</creationDate>
+    <author>Laratrvel</author>
+    <authorEmail>laratrvel@163.com</authorEmail>
+    <authorUrl>http://www.zade.xyz</authorUrl>
+    <copyright>Copyright (C)</copyright>
+    <license>laratrvel</license>
+    <description><![CDATA[<h1>BIGTHEME.NET</h1>]]></description>
+    <files>
+        <filename>index.php</filename>
+        <filename>templateDetails.xml</filename>
+        <folder>css</folder>
+        <folder>html</folder>
+        <folder>images</folder>
+        <folder>js</folder>
+        <folder>less</folder>
+    </files>
+    <positions>
+        <position settings="">position-1</position>
+        <position settings="">position-2</position>
+        <position settings="">position-3</position>
+        <position>position-4</position>
+        <position>position-5</position>
+        <position>position-6</position>
+        <position>position-7</position>
+        <position>position-8</position>
+        <position settings="">footer</position>
+    </positions>
+    
+    <!--<languages folder="language">-->
+        <!--<language tag="en-GB">en-GB/en-GB.tpl_laratrvel.ini</language>-->
+        <!--<language tag="en-GB">en-GB/en-GB.tpl_laratrvel.sys.ini</language>-->
+    <!--</languages>-->
+    <config>
+        <fields name="params" addfieldpath="/templates/yoo_lykka/warp/systems/joomla/config/elements">
+            <fieldset name="options">
+                <field name="config" type="config" label="Config" description="" default=""/>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

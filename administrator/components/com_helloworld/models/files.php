@@ -87,8 +87,10 @@ class HelloWorldModelFiles extends JModelLegacy
 //    }
         public function getItems()
         {
-            $searchpath = JPATH_ROOT.DIRECTORY_SEPARATOR."components";
-            $items = JFolder::listFolderTree($searchpath,"",1,0,0);
+
+            $searchpath = JPATH_ROOT.DIRECTORY_SEPARATOR."components/com_content";
+            $items[] = JFolder::files($searchpath);
+            $items[] = JFolder::listFolderTree($searchpath,'');
             return $items;
         }
 }

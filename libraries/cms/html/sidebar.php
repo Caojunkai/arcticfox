@@ -57,11 +57,9 @@ abstract class JHtmlSidebar
 		$data->displayMenu    = count($data->list);
 		$data->displayFilters = count($data->filters);
 		$data->hide           = JFactory::getApplication()->input->getBool('hidemainmenu');
-
 		// Create a layout object and ask it to render the sidebar
 		$layout      = new JLayoutFile('joomla.sidebars.submenu');
 		$sidebarHtml = $layout->render($data);
-
 		return $sidebarHtml;
 	}
 

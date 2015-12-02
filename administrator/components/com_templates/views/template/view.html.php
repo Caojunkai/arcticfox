@@ -273,7 +273,6 @@ class TemplatesViewTemplate extends JViewLegacy
 		$this->files = $array;
 		$txt         = $this->loadTemplate('tree');
 		$this->files = $temp;
-
 		return $txt;
 	}
 
@@ -293,7 +292,6 @@ class TemplatesViewTemplate extends JViewLegacy
 		$this->files = $array;
 		$txt         = $this->loadTemplate('folders');
 		$this->files = $temp;
-
 		return $txt;
 	}
 }

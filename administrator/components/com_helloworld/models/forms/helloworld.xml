@@ -14,11 +14,19 @@
 			class="inputbox"
 			default=""
 		/>
-		<field
-				name="topic"
-				type="City"
-				label="选择"
-				description="ttttt"
-		/>
+		<field name="choose"
+			   type="ChooseFiles"
+			   label="JSTATUS"
+			   state="JSTATE"
+			   title="JTITLE"
+			   description="JFIELD_PUBLISHED_DESC"
+			   path="D:\WWW\arcticfox\administrator\components\com_helloworld"
+			   filetype=""
+			   select="">
+			<option type="exclude">.svn</option>
+			<option type="exclude">.CVS</option>
+			<option type="exclude">.xml</option>
+			<option type="include">.ini</option>
+		</field>
 	</fieldset>
 </form>

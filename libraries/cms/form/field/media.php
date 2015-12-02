@@ -274,7 +274,6 @@ class JFormFieldMedia extends JFormField
 
 		$html = array();
 		$attr = '';
-
 		// Tooltip for INPUT showing whole image path
 		$options = array(
 			'onShow' => 'jMediaRefreshImgpathTip',

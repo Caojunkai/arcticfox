@@ -132,7 +132,7 @@ else
 ?>">
 
 	<!-- Body -->
-	<div class="body">
+	<div class="body ">
 		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : ''); ?>">
 			<!-- Header -->
 			<header class="header" role="banner">
