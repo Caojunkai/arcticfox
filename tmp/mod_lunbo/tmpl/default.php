@@ -1,10 +1,14 @@
 <?php
 defined('_JEXEC') or die;
+
+$mod_width = is_numeric($params->get("width")) ? $params->get('width') : 1000;
+$imgUrl = ModLunBoHelper::getImg($params);
 JHtml::_('stylesheet', 'mod_lunbo/main.css', array(), true);
 JHtml::_('script', 'mod_lunbo/main.js', array(), true);
 JHtml::_('script', 'mod_lunbo/slider.js', array(), true);
 //JHtml::stylesheet('mod_lunbo/search.css', array(), true);
 //JHtml::script('mod_lunbo/jquery.banner.js',false,true);
+
 ?>
 <div id="banner_tabs" class="flexslider">
     <ul class="slides">

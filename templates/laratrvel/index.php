@@ -20,7 +20,6 @@ $menu =  $app->getMenu()->getMenu();
 foreach ($menu as $key => $value){
     $arr[] = $value->title;
 }
-
 if($task == "edit" || $layout == "form" )
 {
     $fullWidth = 1;
@@ -105,7 +104,7 @@ else
 <div class="container<?php echo ($params->get('fluidContainer') ? '' : '-fluid'); ?>">
     <div class="row">
         <!--开始 navbar-->
-        <div class="navbar  " role="navigation" id="menu-nav">
+        <div class="navbar  navbar-fixed-top" role="navigation" id="menu-nav">
             <nav class="navbar navbar-default navbar-inverse " role="navigation">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="container">
@@ -121,7 +120,6 @@ else
                     <div>
                         <jdoc:include type="modules"   name="position-30" style="none" />
                     </div>
-                     Collect the nav links, forms, and other content for toggling
                     <div class="collapse navbar-collapse navbar-ex1-collapse navbar-right" id="navbar-select">
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="#">综述</a></li>

@@ -9,7 +9,7 @@
     <authorUrl>http://www.zade.xyz</authorUrl>
     <copyright>Copyright (C)</copyright>
     <license>laratrvel</license>
-    <description><![CDATA[<h1>BIGTHEME.NET</h1>]]></description>
+    <description><![CDATA[<h1>Laratrvel Template Powered By Lratrvel</h1>]]></description>
     <files>
         <filename>index.php</filename>
         <filename>templateDetails.xml</filename>
@@ -20,6 +20,7 @@
         <folder>less</folder>
     </files>
     <positions>
+        <position settings="">top</position>
         <position settings="">position-1</position>
         <position settings="">position-2</position>
         <position settings="">position-3</position>
@@ -28,6 +29,13 @@
         <position>position-6</position>
         <position>position-7</position>
         <position>position-8</position>
+        <position>position-9</position>
+        <position>position-10</position>
+        <position>position-11</position>
+        <position>position-12</position>
+        <position>position-13</position>
+        <position>position-14</position>
+        <position>position-15</position>
         <position settings="">footer</position>
     </positions>
     
@@ -37,9 +45,23 @@
     <!--</languages>-->
     <config>
         <fields name="params" addfieldpath="/templates/yoo_lykka/warp/systems/joomla/config/elements">
-            <fieldset name="options">
-                <field name="config" type="config" label="Config" description="" default=""/>
+            <fieldset
+                    name="navbar"
+                    label="TPL_LARATRVEL_FIELD_NAVBAR_LABEL">
+                <field
+                        name="nav-menu"
+                        type="menu"
+                        label="TPL_LARATRVEL_FIELD_NAVBAR_MENU_LABEL"
+                        description=""
+                        default=""
+                />
             </fieldset>
+            <fieldset
+                    name="option-2"
+                    label="TPL_LARATRVEL_FIELD_OPTION-2_LABEL">
+            <field name="config-2" type="menuitem" label="Config" description="" default=""/>
+
+        </fieldset>
         </fields>
     </config>
 </extension>
